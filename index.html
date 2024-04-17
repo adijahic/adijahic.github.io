@@ -7,19 +7,23 @@
     <style>
         body {
             margin-left: 200px; /* Space on the left for buttons */
-            margin-right: 1.5in; /* 1.5 inch margin on the right */
-            margin-top: 1in; /* 1 inch margin at the top */
+            margin-right: 200px; /* 1.5 inch margin on the right */
+            margin-top: 0.75in; /* 1 inch margin at the top */
         }
         h2 {
             font-weight: bold; /* Making the "About Me" text bold */
             font-size: inherit; /* Making the "About Me" text the same size as the rest of the text */
+        }  
+	.clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <div style="clear: both;"> <!-- Add a clearing div to ensure text appears below the image -->
         <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 200px; height: auto; float: left; margin-right: 20px;">
-	</div>
+	<div class="clearfix">
         <h1>Adi Jahic</h1>
 
         <h2>About Me:</h2>
@@ -33,6 +37,7 @@
         <p>
             adijahic@wharton.upenn.edu
         </p> 
+	</div>
 </body>
 </html>
 
