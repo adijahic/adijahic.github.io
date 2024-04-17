@@ -35,17 +35,20 @@
         .image-container img {
             max-width: 100%; /* Make the image responsive */
             height: auto;
+            float: left; /* Float the image to the left by default */
+            margin-right: 20px; /* Add spacing between image and text */
         }
 
-        /* Media Query for larger screens */
-        @media screen and (min-width: 601px) {
+        /* Media Query for smaller screens */
+        @media screen and (max-width: 600px) {
             body {
-                margin-left: 150px; /* Space on the left for buttons */
-                margin-right: 150px; /* 1.5 inch margin on the right */
-            }
-            .image-container {
-                float: left; /* Float the image to the left for desktop layout */
+                margin-left: 20px;
                 margin-right: 20px;
+            }
+            .image-container img {
+                float: none; /* Remove float for mobile layout */
+                margin-right: 0; /* Remove margin for mobile layout */
+                margin-bottom: 10px; /* Add margin below image for mobile layout */
             }
         }
     </style>
@@ -84,7 +87,4 @@
     </div>
 </body>
 </html>
-
-
-
 
