@@ -10,6 +10,7 @@
             margin-top: 0.75in; /* 1 inch margin at the top */
             margin-left: 20px; /* Space on the left for mobile */
             margin-right: 20px; /* Space on the right for mobile */
+            text-align: center; /* Center align buttons */
         }
         h2 {
             font-weight: bold;
@@ -26,7 +27,7 @@
             display: inline-block; /* Display buttons in a row */
             margin-right: 10px; /* Add space between buttons */
             cursor: pointer;
-            padding: 10px 20px; /* Add padding */
+            padding: 15px 30px; /* Add padding */
             font-size: larger; /* Larger font size */
             text-decoration: none; /* Remove underline */
             border-radius: 5px; /* Add border radius */
@@ -45,17 +46,22 @@
             body {
                 margin-left: 150px; /* Space on the left for buttons */
                 margin-right: 150px; /* 1.5 inch margin on the right */
+                text-align: left; /* Align text to the left for desktop layout */
             }
             .image-container {
                 float: left; /* Float the image to the left for desktop layout */
                 margin-right: 20px;
+            }
+            .buttons-container {
+                text-align: center; /* Center align buttons on larger screens */
             }
         }
     </style>
 </head>
 <body>
     <!-- Buttons -->
-    <div>
+    <div class="buttons-container">
+        <a href="index.html" class="button">Adi Jahic</a>
         <a href="research.html" class="button">Research</a>
         <a href="AdiJahic_CV.pdf" target="_blank" class="button">CV</a>
         <a href="film.html" class="button">Film</a>
