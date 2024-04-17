@@ -6,14 +6,10 @@
     <title>Adi Jahic</title>
     <style>
         body {
-            margin-left: 150px; /* Space on the left for buttons */
-            margin-right: 150px; /* 1.5 inch margin on the right */
-            margin-top: 0.75in; /* 1 inch margin at the top */
             font-family: "Times New Roman", Times, serif;
         }
         h2 {
-            font-weight: bold; /* Making the "About Me" text bold */
-            font-size: inherit; /* Making the "About Me" text the same size as the rest of the text */
+            font-weight: bold;
         }  
         .clearfix::after {
             content: "";
@@ -21,46 +17,60 @@
             clear: both;
         }
         .button {
-            background-color: transparent; /* No background color */
+            background-color: transparent;
             border: none;
-            color: blue; /* Blue text */
-            display: block; /* Block display */
-            margin: 5px auto; /* Margin to center horizontally */
-            cursor: pointer; /* Cursor on hover */
+            color: blue;
+            display: block;
+            margin: 5px auto;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Media Query for smaller screens */
+        @media screen and (max-width: 600px) {
+            body {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+        }
+        /* Media Query for larger screens */
+        @media screen and (min-width: 601px) {
+            body {
+                margin-left: 150px;
+                margin-right: 150px;
+                margin-top: 0.75in;
+            }
         }
     </style>
 </head>
 <body>
-        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 260px; height: auto; float: left; margin-right: 20px;">
-        <div class="clearfix">
-            <h1>Adi Jahic</h1>
+    <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 260px; height: auto; float: left; margin-right: 20px;">
+    <div class="clearfix">
+        <h1>Adi Jahic</h1>
 
-            <h2>About Me:</h2>
-            <p>
-                I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
-                Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
-                My research interests include Behavioral and Development Economics with a focus on social networks.
-            </p>
+        <h2>About Me:</h2>
+        <p>
+            I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
+            Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
+            My research interests include Behavioral and Development Economics with a focus on social networks.
+        </p>
 
-	    <p>
-		I am also an award-winning filmmaker, having made <a href="https://www.thingswelikefilm.com/" target="_blank" style="text-decoration: underline; color: black;">feature-length films</a> that have played in theaters and festivals in the U.S. and abroad.
-	    </p>
+        <p>
+            I am also an award-winning filmmaker, having made <a href="https://www.thingswelikefilm.com/" target="_blank">feature-length films</a> that have played in theaters and festivals in the U.S. and abroad.
+        </p>
 
-            <h2>Contact: </h2>
-	    
-            <p>
-		326 Vance Hall<br>
-		3733 Spruce Street, Philadelphia<br>
-                adijahic@wharton.upenn.edu
-            </p>
-            <p> 
-	    <a href="research.html" target="_blank" style="text-decoration: underline; color: black;">Research</a> <br>
-            <a href="AdiJahic_CV.pdf" target="_blank" style="text-decoration: underline; color: black;">CV</a> <br>
-	   </p>
-        </div>
+        <h2>Contact: </h2>
+
+        <p>
+            326 Vance Hall<br>
+            3733 Spruce Street, Philadelphia<br>
+            adijahic@wharton.upenn.edu
+        </p>
+        <p> 
+            <a href="research.html" target="_blank">Research</a> <br>
+            <a href="AdiJahic_CV.pdf" target="_blank">CV</a> <br>
+        </p>
     </div>
 </body>
 </html>
-
-
-
