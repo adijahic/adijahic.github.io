@@ -7,9 +7,9 @@
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
-            margin-left: 150px; /* Space on the left for buttons */
-            margin-right: 150px; /* 1.5 inch margin on the right */
             margin-top: 0.75in; /* 1 inch margin at the top */
+            margin-left: 20px; /* Space on the left for mobile */
+            margin-right: 20px; /* Space on the right for mobile */
         }
         h2 {
             font-weight: bold;
@@ -30,40 +30,29 @@
         }
         .image-container {
             overflow: hidden; /* Clear float */
+            margin-bottom: 20px; /* Add margin below image */
         }
         .image-container img {
-            display: block; /* Make the image a block element */
-            margin-right: 20px;
+            max-width: 100%; /* Make the image responsive */
+            height: auto;
         }
 
-        /* Media Query for smaller screens */
-        @media screen and (max-width: 600px) {
-            body {
-                margin-left: 20px;
-                margin-right: 20px;
-                margin-top: 20px;
-            }
-            .image-container img {
-                float: none; /* Remove float for mobile layout */
-                margin-bottom: 20px; /* Add margin below image for mobile layout */
-            }
-        }
         /* Media Query for larger screens */
         @media screen and (min-width: 601px) {
             body {
-                margin-left: 150px;
-                margin-right: 150px;
-                margin-top: 0.75in;
+                margin-left: 150px; /* Space on the left for buttons */
+                margin-right: 150px; /* 1.5 inch margin on the right */
             }
-            .image-container img {
+            .image-container {
                 float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="image-container">
-        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 260px; height: auto;">
+        <img src="adi-jahic.jpg" alt="Adi Jahic">
     </div>
     <div class="clearfix">
         <h1>Adi Jahic</h1>
@@ -93,5 +82,6 @@
     </div>
 </body>
 </html>
+
 
 
