@@ -33,7 +33,6 @@
         }
         .image-container img {
             display: block; /* Make the image a block element */
-            float: left; /* Float the image to the left */
             margin-right: 20px;
         }
 
@@ -44,6 +43,10 @@
                 margin-right: 20px;
                 margin-top: 20px;
             }
+            .image-container img {
+                float: none; /* Remove float for mobile layout */
+                margin-bottom: 20px; /* Add margin below image for mobile layout */
+            }
         }
         /* Media Query for larger screens */
         @media screen and (min-width: 601px) {
@@ -51,6 +54,9 @@
                 margin-left: 150px;
                 margin-right: 150px;
                 margin-top: 0.75in;
+            }
+            .image-container img {
+                float: left; /* Float the image to the left for desktop layout */
             }
         }
     </style>
