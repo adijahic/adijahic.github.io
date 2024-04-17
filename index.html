@@ -14,31 +14,25 @@
             font-weight: bold; /* Making the "About Me" text bold */
             font-size: inherit; /* Making the "About Me" text the same size as the rest of the text */
         }
-        .flex-container {
-            display: flex; /* Use flexbox layout */
-            align-items: flex-start; /* Align items at the start of the flex container */
-        }
     </style>
 </head>
 <body>
-    <div class="flex-container">
-        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 200px; height: auto; margin-right: 20px;">
-        <div>
-            <h1>Adi Jahic</h1>
+    <div style="clear: both;"> <!-- Add a clearing div to ensure text appears below the image -->
+        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 200px; height: auto; float: left; margin-right: 20px;">
+	</div>
+        <h1>Adi Jahic</h1>
 
-            <h2>About Me:</h2>
-            <p>
-                I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
-                Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
-                My research interests include Behavioral and Development Economics with a focus on social networks.
-            </p>
+        <h2>About Me:</h2>
+        <p>
+            I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
+            Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
+            My research interests include Behavioral and Development Economics with a focus on social networks.
+        </p>
 
-            <h2>Contact: </h2>
-            <p>
-                adijahic@wharton.upenn.edu
-            </p>
-        </div>
-    </div>   
+        <h2>Contact: </h2>
+        <p>
+            adijahic@wharton.upenn.edu
+        </p> 
 </body>
 </html>
 
