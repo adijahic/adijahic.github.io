@@ -7,6 +7,9 @@
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
+            margin-left: 150px; /* Space on the left for buttons */
+            margin-right: 150px; /* 1.5 inch margin on the right */
+            margin-top: 0.75in; /* 1 inch margin at the top */
         }
         h2 {
             font-weight: bold;
@@ -24,6 +27,14 @@
             margin: 5px auto;
             cursor: pointer;
             text-decoration: underline;
+        }
+        .image-container {
+            overflow: hidden; /* Clear float */
+        }
+        .image-container img {
+            display: block; /* Make the image a block element */
+            float: left; /* Float the image to the left */
+            margin-right: 20px;
         }
 
         /* Media Query for smaller screens */
@@ -45,7 +56,9 @@
     </style>
 </head>
 <body>
-    <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 260px; height: auto; float: left; margin-right: 20px;">
+    <div class="image-container">
+        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 260px; height: auto;">
+    </div>
     <div class="clearfix">
         <h1>Adi Jahic</h1>
 
@@ -57,7 +70,7 @@
         </p>
 
         <p>
-            I am also an award-winning filmmaker, having made <a href="https://www.thingswelikefilm.com/" target="_blank" style="text-decoration: underline; color: blue;">feature-length films</a> that have played in theaters and festivals in the U.S. and abroad.
+            I am also an award-winning filmmaker, having made <a href="https://www.thingswelikefilm.com/" target="_blank" style="text-decoration: underline; color: black;">feature-length films</a> that have played in theaters and festivals in the U.S. and abroad.
         </p>
 
         <h2>Contact: </h2>
@@ -68,10 +81,11 @@
             adijahic@wharton.upenn.edu
         </p>
         <p> 
-            <a href="research.html" target="_blank" style="text-decoration: underline; color: blue;">Research</a> <br>
-            <a href="AdiJahic_CV.pdf" target="_blank" style="text-decoration: underline; color: blue;">CV</a> <br>
+            <a href="research.html" target="_blank" style="text-decoration: underline; color: black;">Research</a> <br>
+            <a href="AdiJahic_CV.pdf" target="_blank" style="text-decoration: underline; color: black;">CV</a> <br>
         </p>
     </div>
 </body>
 </html>
+
 
