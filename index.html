@@ -9,37 +9,55 @@
             margin-left: 200px; /* Space on the left for buttons */
             margin-right: 200px; /* 1.5 inch margin on the right */
             margin-top: 0.75in; /* 1 inch margin at the top */
+            font-family: Arial, sans-serif; /* Setting the font family */
         }
         h2 {
             font-weight: bold; /* Making the "About Me" text bold */
             font-size: inherit; /* Making the "About Me" text the same size as the rest of the text */
         }  
-	.image-container {
-	  max-width: 1000px;
-	}
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .button {
+            background-color: transparent; /* No background color */
+            border: none;
+            color: blue; /* Blue text */
+            padding: 10px 24px; /* Padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline block display */
+            margin: 5px; /* Margin around the button */
+            cursor: pointer; /* Cursor on hover */
+        }
     </style>
 </head>
 <body>
-	<div class="image-container">
-	<p>     
-	<img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 250px; height: auto; float: left; margin-right: 20px;">
-	</p>
-        <h1>Adi Jahic</h1>
+    <div class="image-container">
+        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 250px; height: auto; float: left; margin-right: 20px;">
+        <div class="clearfix">
+            <h1>Adi Jahic</h1>
 
-        <h2>About Me:</h2>
-        <p>
-            I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
-            Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
-            My research interests include Behavioral and Development Economics with a focus on social networks.
-        </p>
+            <h2>About Me:</h2>
+            <p>
+                I am a pre-doctoral fellow at Wharton Business Economics and Public Policy Department.
+                Starting in the fall of 2024, I will be a PhD student studying Economics at Brown University.
+                My research interests include Behavioral and Development Economics with a focus on social networks.
+            </p>
 
-        <h2>Contact: </h2>
-        <p>
-            adijahic@wharton.upenn.edu
-        </p> 
-	</div>
+            <h2>Contact: </h2>
+            <p>
+                adijahic@wharton.upenn.edu
+            </p>
+            <a href="research.html" class="button">Research</a>
+            <a href="cv.html" class="button">CV</a>
+            <a href="film.html" class="button">Film</a>
+        </div>
+    </div>
 </body>
 </html>
+
 
 
 
