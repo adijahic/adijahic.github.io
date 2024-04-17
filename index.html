@@ -20,21 +20,21 @@
             display: table;
             clear: both;
         }
-	.button {
-  	  background-color: transparent;
-   	  border: none;
-   	  color: #808080;
-   	  display: inline-block;
-   	  margin-right: 10px; /* Reduced space between buttons */
-   	  margin-left: 0; /* Align buttons to the left */
-   	  cursor: pointer;
-  	  padding: 10px 10px;
-  	  font-size: larger;
-  	  text-decoration: none;
-  	  border-radius: 5px;
-  	  font-family: sans-serif; /* Sans-serif font */
-  	  margin-bottom: 40px;
-	}
+        .button {
+            background-color: transparent;
+            border: none;
+            color: #808080;
+            display: inline-block;
+            margin-right: 10px; /* Reduced space between buttons */
+            margin-left: 0; /* Align buttons to the left */
+            cursor: pointer;
+            padding: 10px 10px;
+            font-size: larger;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: sans-serif; /* Sans-serif font */
+            margin-bottom: 40px;
+        }
 
         .image-container {
             overflow: hidden; /* Clear float */
@@ -58,6 +58,24 @@
             }
             .buttons-container {
                 text-align: left; /* Center align buttons on larger screens */
+            }
+
+            /* Additional styling for buttons on desktop */
+            .button {
+                padding: 20px 15px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+            }
+
+            /* Adjust padding for the Home button */
+            .button:first-child {
+                padding-right: 50px; /* Additional padding for the Home button */
+            }
+        }
+
+        /* Media Query for smaller screens (phones) */
+        @media screen and (max-width: 600px) {
+            .button {
+                font-size: smaller; /* Smaller font size for all buttons on phones */
             }
         }
     </style>
@@ -98,8 +116,6 @@
     </div>
 </body>
 </html>
-
-
 
 
 
