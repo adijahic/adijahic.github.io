@@ -14,16 +14,30 @@
             font-weight: bold; /* Making the "About Me" text bold */
             font-size: inherit; /* Making the "About Me" text the same size as the rest of the text */
         }  
-	.clearfix::after {
+        .clearfix::after {
             content: "";
             display: table;
             clear: both;
         }
+        .button {
+            background-color: transparent; /* No background color */
+            border: none;
+            color: blue; /* Blue text */
+            padding: 10px 24px; /* Padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline block display */
+            margin: 5px; /* Margin around the button */
+            cursor: pointer; /* Cursor on hover */
+        }
     </style>
 </head>
 <body>
-        <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 200px; height: auto; float: left; margin-right: 20px;">
-	<div class="clearfix">
+    <img src="adi-jahic.jpg" alt="Adi Jahic" style="width: 200px; height: auto; float: left; margin-right: 20px;">
+    <div class="clearfix">
+        <button class="button">Research</button>
+        <button class="button">CV</button>
+        <button class="button">Film</button>
         <h1>Adi Jahic</h1>
 
         <h2>About Me:</h2>
@@ -37,7 +51,7 @@
         <p>
             adijahic@wharton.upenn.edu
         </p> 
-	</div>
+    </div>
 </body>
 </html>
 
