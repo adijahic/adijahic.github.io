@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adi Jahic</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin-top: 0.25in; /* 1 inch margin at the top */
+            margin-left: 20px; /* Space on the left for mobile */
+            margin-right: 20px; /* Space on the right for mobile */
+            text-align: left; /* Center align buttons */
+        }
+        h2 {
+            font-weight: bold;
+        }  
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .button {
+            background-color: transparent;
+            border: none;
+            color: #808080;
+            display: inline-block;
+            margin-right: 10px; /* Reduced space between buttons */
+            margin-left: 0; /* Align buttons to the left */
+            cursor: pointer;
+            padding: 5px 5px;
+            font-size: larger;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: sans-serif; /* Sans-serif font */
+            margin-bottom: 20px;
+        }
+        .button:first-child {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .image-container {
+            overflow: hidden; /* Clear float */
+            margin-bottom: 20px; /* Add margin below image */
+        }
+        .image-container img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto;
+        }
+
+        /* Media Query for larger screens */
+        @media screen and (min-width: 601px) {
+            body {
+                margin-left: 150px; /* Space on the left for everything except buttons */
+                margin-right: 150px; /* Space on the right for everything except buttons */
+                text-align: left; /* Align text to the left for desktop layout */
+            }
+            .buttons-container {
+                margin-left: -100px; /* Compensate for body margin on buttons */
+            }
+            .image-container {
+                float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
+            }
+            .clearfix {
+                margin-left: -100px; /* Compensate for body margin on text */
+            }
+            .button {
+                padding: 20px 15px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Media Query for smaller screens (phones) */
+        @media screen and (max-width: 600px) {
+            .button {
+                font-size: smaller; /* Smaller font size for all buttons on phones */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Buttons -->
+    <div class="buttons-container">
+        <a href="index.html" class="button">Home</a>
+        <a href="research.html" class="button">Research</a>
+        <a href="AdiJahic_CV.pdf" target="_blank" class="button">CV</a>
+        <a href="film.html" class="button">Film</a>
+    </div>
+
+    <h1>Film Page</h1>
+    <p>This is the Film page. Film content will be added here.</p>
+</body>
+</html>
