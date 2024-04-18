@@ -35,10 +35,10 @@
             font-family: sans-serif; /* Sans-serif font */
             margin-bottom: 20px;
         }
-	.button:first-child {
-		font-size: large;
-		font-weight: bold;
-            }
+        .button:first-child {
+            font-size: large;
+            font-weight: bold;
+        }
 
         .image-container {
             overflow: hidden; /* Clear float */
@@ -52,23 +52,24 @@
         /* Media Query for larger screens */
         @media screen and (min-width: 601px) {
             body {
-                margin-left: 50px; /* Space on the left for buttons */
-                margin-right: 150px; /* 1.5 inch margin on the right */
+                margin-left: 150px; /* Space on the left for everything except buttons */
+                margin-right: 150px; /* Space on the right for everything except buttons */
                 text-align: left; /* Align text to the left for desktop layout */
+            }
+            .buttons-container {
+                margin-left: -100px; /* Compensate for body margin on buttons */
             }
             .image-container {
                 float: left; /* Float the image to the left for desktop layout */
                 margin-right: 20px;
             }
-            .buttons-container {
-                text-align: left; /* Center align buttons on larger screens */
+            .clearfix {
+                margin-left: -100px; /* Compensate for body margin on text */
             }
-
-            /* Additional styling for buttons on desktop */
             .button {
                 padding: 20px 15px; /* Reduced padding for other buttons */
                 font-size: medium; /* Smaller font size for other buttons */
-		margin-bottom: 20px;
+                margin-bottom: 20px;
             }
         }
 
