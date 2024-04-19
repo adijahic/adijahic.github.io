@@ -54,7 +54,7 @@
         }
 
 	/* Media Query for landscape orientation and wider screens */
-@media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) {
+@media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 601px) {
     body {
         margin-left: 150px; /* Space on the left for everything except buttons */
         margin-right: 150px; /* Space on the right for everything except buttons */
@@ -79,8 +79,26 @@
 
 
         /* Media Query for smaller screens (phones) */
-        @media screen and (max-width: 600px) {
+        @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (max-width: 600px) {
+    body {
+        margin-left: 30px; /* Space on the left for everything except buttons */
+        margin-right: 30px; /* Space on the right for everything except buttons */
+        text-align: left; /* Align text to the left for desktop layout */
+    }
+    .buttons-container {
+        margin-left: -100px; /* Compensate for body margin on buttons */
+    }
+    .image-container {
+        float: left; /* Float the image to the left for desktop layout */
+        margin-right: 20px;
+    }
+    .clearfix {
+        margin-left: -100px; /* Compensate for body margin on text */
+    }
             .button {
+       		padding: 20px 10px; /* Reduced padding for other buttons */
+        	font-size: medium; /* Smaller font size for other buttons */
+        	margin-bottom: 20px;
                 font-size: smaller; /* Smaller font size for all buttons on phones */
             }
         }
