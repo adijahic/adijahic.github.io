@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adi Jahic</title>
+    <title>Adi Jahic - Economics PhD student and Filmmaker</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Brown-University-Seal.ico">
+    <!-- Meta Description -->
+    <meta name="description" content="Adi Jahic is a pre-doctoral fellow at Wharton Business Economics and Public Policy Department. Starting in the fall of 2024, he will be a PhD student studying Economics at Brown University. Learn about his research interests in Behavioral and Development Economics with a focus on social networks, and his award-winning films.">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.adijahic.github.io">
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
-            margin-top: 0.25in; /* 1 inch margin at the top */
-            margin-left: 20px; /* Space on the left for mobile */
-            margin-right: 20px; /* Space on the right for mobile */
+            margin-top: 0.2in; /* 1 inch margin at the top */
+            margin-left: 30px; /* Space on the left for mobile */
+            margin-right: 30px; /* Space on the right for mobile */
             text-align: left; /* Center align buttons */
+            margin-bottom: 20px; /* Additional white space at the bottom */
         }
         h2 {
             font-weight: bold;
@@ -27,19 +32,20 @@
             border: none;
             color: #808080;
             display: inline-block;
-            margin-right: 10px; /* Reduced space between buttons */
+            margin-right: 5px; /* Reduced space between buttons */
             margin-left: 0; /* Align buttons to the left */
             cursor: pointer;
-            padding: 5px 5px;
-            font-size: larger;
+            padding: 2px 2px;
+            font-size: medium;
             text-decoration: none;
             border-radius: 5px;
             font-family: sans-serif; /* Sans-serif font */
             margin-bottom: 20px;
         }
         .button:first-child {
-            font-size: large;
+            font-size: larger;
             font-weight: bold;
+            margin-right: 10px; /* Reduced space between buttons */
         }
 
         .image-container {
@@ -47,37 +53,53 @@
             margin-bottom: 20px; /* Add margin below image */
         }
         .image-container img {
-            max-width: 100%; /* Make the image responsive */
+            max-width: 110%; /* Make the image responsive */
             height: auto;
         }
 
-        /* Media Query for larger screens */
-        @media screen and (min-width: 601px) {
-            body {
-                margin-left: 150px; /* Space on the left for everything except buttons */
-                margin-right: 150px; /* Space on the right for everything except buttons */
-                text-align: left; /* Align text to the left for desktop layout */
-            }
-            .buttons-container {
-                margin-left: -100px; /* Compensate for body margin on buttons */
-            }
-            .image-container {
-                float: left; /* Float the image to the left for desktop layout */
-                margin-right: 20px;
-            }
-            .clearfix {
-                margin-left: -100px; /* Compensate for body margin on text */
-            }
-            .button {
-                padding: 20px 15px; /* Reduced padding for other buttons */
-                font-size: medium; /* Smaller font size for other buttons */
-                margin-bottom: 20px;
-            }
-        }
+	/* Media Query for landscape orientation and wider screens */
+@media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
+    body {
+        margin-left: 150px; /* Space on the left for everything except buttons */
+        margin-right: 150px; /* Space on the right for everything except buttons */
+        text-align: left; /* Align text to the left for desktop layout */
+    }
+    .buttons-container {
+        margin-left: -100px; /* Compensate for body margin on buttons */
+    }
+    .image-container {
+        float: left; /* Float the image to the left for desktop layout */
+        margin-right: 20px;
+    }
+    .clearfix {
+        margin-left: -100px; /* Compensate for body margin on text */
+    }
+    .button {
+        padding: 20px 10px; /* Reduced padding for other buttons */
+        font-size: medium; /* Smaller font size for other buttons */
+        margin-bottom: 20px;
+    }
+}
+
 
         /* Media Query for smaller screens (phones) */
-        @media screen and (max-width: 600px) {
+        @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (max-width: 1000px) {
+    body {
+        margin-left: 20px; /* Space on the left for everything except buttons */
+        margin-right: 20px; /* Space on the right for everything except buttons */
+        text-align: left; /* Align text to the left for desktop layout */
+    }
+    .image-container {
+        float: left; /* Float the image to the left for desktop layout */
+        margin-right: 20px;
+    }
+    .clearfix {
+        margin-left: 0px; /* Compensate for body margin on text */
+    }
             .button {
+       		padding: 20px 10px; /* Reduced padding for other buttons */
+        	font-size: medium; /* Smaller font size for other buttons */
+        	margin-bottom: 20px;
                 font-size: smaller; /* Smaller font size for all buttons on phones */
             }
         }
