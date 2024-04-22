@@ -29,21 +29,6 @@
       ]
     }
     </script>
-<script>
-    // JavaScript function to add bold style to the current page's navigation link
-    function setActiveLink() {
-        var currentPageUrl = window.location.href;
-        var links = document.querySelectorAll('.button');
-        for (var i = 0; i < links.length; i++) {
-            if (links[i].href === currentPageUrl) {
-                links[i].style.fontWeight = "bold";
-                break; // Once found, stop the loop
-            }
-        }
-    }
-    // Call the function when the page loads
-    window.onload = setActiveLink;
-</script>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
@@ -79,6 +64,7 @@
         .button:first-child {
             font-size: larger;
             margin-right: 10px; /* Reduced space between buttons */
+	    font-weight: bold;
         }
 
         .image-container {
