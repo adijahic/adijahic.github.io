@@ -33,11 +33,13 @@
     // JavaScript function to add bold style to the current page's navigation link
     function setActiveLink() {
         var currentPageUrl = window.location.href;
+        var homeButtonUrl = document.getElementById('home-link').href;
         var links = document.querySelectorAll('.button');
         for (var i = 0; i < links.length; i++) {
-            if (links[i].href === currentPageUrl) {
-                links[i].style.fontWeight = "bold";
-                break; // Once found, stop the loop
+            if (currentPageUrl === homeButtonUrl && links[i].href === homeButtonUrl) {
+                links[i].style.fontWeight = "bold"; // Home button is bold on home page
+            } else if (links[i].href === currentPageUrl) {
+                links[i].style.fontWeight = "bold"; // Current page button is bold
             }
         }
     }
