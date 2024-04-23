@@ -30,6 +30,13 @@
     }
     </script>
 <script>
+function search() {
+    // Get the search query entered by the user
+    var query = document.getElementById("search-input").value;
+    
+    // Redirect to a search results page with the query as a parameter
+    window.location.href = "search-results.html?query=" + encodeURIComponent(query);
+}
 function searchSite() {
     var query = document.getElementById('search-input').value;
     var encodedQuery = encodeURIComponent(query); // Encode the search query
