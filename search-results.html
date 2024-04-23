@@ -137,20 +137,21 @@ function search() {
     <h1>Search Results</h1>
     <div id="search-results"></div>
 
-    <script>
-        // Function to extract and display search results from the URL parameter
-        function displaySearchResults() {
-            // Get the search query parameter from the URL
-            var urlParams = new URLSearchParams(window.location.search);
-            var query = urlParams.get('q');
+function displaySearchResults() {
+    // Get the search query parameter from the URL
+    var urlParams = new URLSearchParams(window.location.search);
+    console.log("URL Parameters:", urlParams.toString()); // Debugging
+    var query = urlParams.get('q');
+    console.log("Search Query:", query); // Debugging
 
-            // Display the search query on the page
-            var searchResultsDiv = document.getElementById('search-results');
-            searchResultsDiv.innerHTML = '<p>Search query: ' + query + '</p>';
+    // Display the search query on the page
+    var searchResultsDiv = document.getElementById('search-results');
+    searchResultsDiv.innerHTML = '<p>Search query: ' + query + '</p>';
 
-            // Additional logic to search through the content of the website and display relevant results
-            // You'll need to implement this part to search through your website's content and display relevant results
-        }
+    // Additional logic to search through the content of the website and display relevant results
+    // You'll need to implement this part to search through your website's content and display relevant results
+}
+
 
         // Call the function when the page loads to display search results
         window.onload = displaySearchResults;
