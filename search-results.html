@@ -138,13 +138,22 @@ function search() {
     <div id="search-results"></div>
 
     <script>
-        // Get the search query from the URL
-        var query = decodeURIComponent(window.location.search.substring(1).split('=')[1]);
-        var content = document.body.innerHTML;
+        // Function to extract and display search results from the URL parameter
+        function displaySearchResults() {
+            // Get the search query parameter from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var query = urlParams.get('q');
 
-        // Find and highlight instances of the query within the content
-        var highlightedContent = content.replace(new RegExp(query, 'gi'), '<span style="background-color: yellow;">$&</span>');
-        document.getElementById('search-results').innerHTML = highlightedContent;
+            // Display the search query on the page
+            var searchResultsDiv = document.getElementById('search-results');
+            searchResultsDiv.innerHTML = '<p>Search query: ' + query + '</p>';
+
+            // Additional logic to search through the content of the website and display relevant results
+            // You'll need to implement this part to search through your website's content and display relevant results
+        }
+
+        // Call the function when the page loads to display search results
+        window.onload = displaySearchResults;
     </script>
 </body>
 </html>
