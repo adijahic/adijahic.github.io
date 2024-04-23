@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div id="search-results"></div>
+
+    <script>
+        // Get the search query from the URL
+        var query = decodeURIComponent(window.location.search.substring(1).split('=')[1]);
+        var content = document.body.innerHTML;
+
+        // Find and highlight instances of the query within the content
+        var highlightedContent = content.replace(new RegExp(query, 'gi'), '<span style="background-color: yellow;">$&</span>');
+        document.getElementById('search-results').innerHTML = highlightedContent;
+    </script>
+</body>
+</html>
