@@ -141,11 +141,27 @@ function displaySearchResults() {
 
     // Display the search query on the page
     var searchResultsDiv = document.getElementById('search-results');
-    searchResultsDiv.innerHTML = '<p>Search query: ' + query + '</p>';
+    searchResultsDiv.innerHTML = '<h2>Search Results</h2><p>Search query: ' + query + '</p>';
 
     // Additional logic to search through the content of the website and display relevant results
-    // You'll need to implement this part to search through your website's content and display relevant results
+    var content = document.body.innerText; // Get all text content of the page
+    var regex = new RegExp('\\b' + query + '\\b', 'gi'); // Create a case-insensitive regex for the search query
+    var matches = content.match(regex); // Find all matches of the search query in the content
+
+    // If matches are found, display them on the page
+    if (matches) {
+        var resultsList = document.createElement('ul');
+        matches.forEach(function(match) {
+            var listItem = document.createElement('li');
+            listItem.textContent = match;
+            resultsList.appendChild(listItem);
+        });
+        searchResultsDiv.appendChild(resultsList);
+    } else {
+        searchResultsDiv.innerHTML += '<p>No results found.</p>';
+    }
 }
+
         // Call the function when the page loads to display search results
         window.onload = displaySearchResults;
     </script>
