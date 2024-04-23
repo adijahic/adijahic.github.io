@@ -11,33 +11,6 @@
     <!-- Canonical Link -->
     <link rel="canonical" href="https://www.adijahic.github.io">
     <meta http-equiv="Cache-control" content="public, max-age=604800"> <!-- Cache for 1 week -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Adi Jahic",
-      "jobTitle": "Economics PhD student and Filmmaker",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Brown Economics Department"
-      },
-      "url": "https://www.adijahic.github.io",
-      "sameAs": [
-        "https://twitter.com/adijahic",
-        "https://www.linkedin.com/in/adi-jahi%C4%87-4168b2b4/",
-        "https://letterboxd.com/godspeed_aj/"
-      ]
-    }
-    </script>
-<script>
-function search() {
-    // Get the search query entered by the user
-    var query = document.getElementById("search-input").value;
-    
-    // Redirect to a search results page with the query as a parameter
-    window.location.href = "search-results.html?query=" + encodeURIComponent(query);
-}
-</script>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
@@ -46,7 +19,7 @@ function search() {
             margin-right: 30px; /* Space on the right for mobile */
             text-align: left; /* Center align buttons */
             margin-bottom: 20px; /* Additional white space at the bottom */
-	    background-color: #FDFDF8; /* Very light eggshell color */
+            background-color: #FDFDF8; /* Very light eggshell color */
         }
         h2 {
             font-weight: bold;
@@ -74,9 +47,8 @@ function search() {
         .button:first-child {
             font-size: larger;
             margin-right: 10px; /* Reduced space between buttons */
-	    font-weight: bold;
+            font-weight: bold;
         }
-
         .image-container {
             overflow: hidden; /* Clear float */
             margin-bottom: 20px; /* Add margin below image */
@@ -85,82 +57,80 @@ function search() {
             max-width: 110%; /* Make the image responsive */
             height: auto;
         }
-	/* Media Query for landscape orientation and wider screens */
-@media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
-    body {
-        margin-left: 140px; /* Space on the left for everything except buttons */
-        margin-right: 140px; /* Space on the right for everything except buttons */
-        text-align: left; /* Align text to the left for desktop layout */
-    }
-    .buttons-container {
-        margin-left: -70px; /* Compensate for body margin on buttons */
-    }
-    .image-container {
-        float: left; /* Float the image to the left for desktop layout */
-        margin-right: 20px;
-    }
-    .clearfix {
-        margin-left: -100px; /* Compensate for body margin on text */
-    }
-    .button {
-        padding: 20px 10px; /* Reduced padding for other buttons */
-        font-size: medium; /* Smaller font size for other buttons */
-        margin-bottom: 20px;
-    }
-}
-
-
+        /* Media Query for landscape orientation and wider screens */
+        @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
+            body {
+                margin-left: 140px; /* Space on the left for everything except buttons */
+                margin-right: 140px; /* Space on the right for everything except buttons */
+                text-align: left; /* Align text to the left for desktop layout */
+            }
+            .buttons-container {
+                margin-left: -70px; /* Compensate for body margin on buttons */
+            }
+            .image-container {
+                float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
+            }
+            .clearfix {
+                margin-left: -100px; /* Compensate for body margin on text */
+            }
+            .button {
+                padding: 20px 10px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+                margin-bottom: 20px;
+            }
+        }
         /* Media Query for smaller screens (phones) */
         @media screen (min-width: 800px) and (max-width: 1000px) {
-    body {
-        margin-left: 20px; /* Space on the left for everything except buttons */
-        margin-right: 20px; /* Space on the right for everything except buttons */
-        text-align: left; /* Align text to the left for desktop layout */
-    }
-    .image-container {
-        float: left; /* Float the image to the left for desktop layout */
-        margin-right: 20px;
-    }
-    .clearfix {
-        margin-left: 0px; /* Compensate for body margin on text */
-    }
+            body {
+                margin-left: 20px; /* Space on the left for everything except buttons */
+                margin-right: 20px; /* Space on the right for everything except buttons */
+                text-align: left; /* Align text to the left for desktop layout */
+            }
+            .image-container {
+                float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
+            }
+            .clearfix {
+                margin-left: 0px; /* Compensate for body margin on text */
+            }
             .button {
-       		padding: 20px 10px; /* Reduced padding for other buttons */
-        	font-size: medium; /* Smaller font size for other buttons */
-        	margin-bottom: 20px;
+                padding: 20px 10px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+                margin-bottom: 20px;
                 font-size: smaller; /* Smaller font size for all buttons on phones */
             }
         }
     </style>
     <script>
         // Function to extract and display search results from the URL parameter
-function displaySearchResults() {
-    // Get the search query parameter from the URL
-    var urlParams = new URLSearchParams(window.location.search);
-    var query = urlParams.get('q');
+        function displaySearchResults() {
+            // Get the search query parameter from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var query = urlParams.get('q');
 
-    // Display the search query on the page
-    var searchResultsDiv = document.getElementById('search-results');
-    searchResultsDiv.innerHTML = '<h2>Search Results</h2><p>Search query: ' + query + '</p>';
+            // Display the search query on the page
+            var searchResultsDiv = document.getElementById('search-results');
+            searchResultsDiv.innerHTML = '<h2>Search Results</h2><p>Search query: ' + query + '</p>';
 
-    // Additional logic to search through the content of the website and display relevant results
-    var content = document.body.innerText; // Get all text content of the page
-    var regex = new RegExp('\\b' + query + '\\b', 'gi'); // Create a case-insensitive regex for the search query
-    var matches = content.match(regex); // Find all matches of the search query in the content
+            // Additional logic to search through the content of the website and display relevant results
+            var content = document.body.innerText; // Get all text content of the page
+            var regex = new RegExp('\\b' + query + '\\b', 'gi'); // Create a case-insensitive regex for the search query
+            var matches = content.match(regex); // Find all matches of the search query in the content
 
-    // If matches are found, display them on the page
-    if (matches) {
-        var resultsList = document.createElement('ul');
-        matches.forEach(function(match) {
-            var listItem = document.createElement('li');
-            listItem.textContent = match;
-            resultsList.appendChild(listItem);
-        });
-        searchResultsDiv.appendChild(resultsList);
-    } else {
-        searchResultsDiv.innerHTML += '<p>No results found.</p>';
-    }
-}
+            // If matches are found, display them on the page
+            if (matches) {
+                var resultsList = document.createElement('ul');
+                matches.forEach(function(match) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = match;
+                    resultsList.appendChild(listItem);
+                });
+                searchResultsDiv.appendChild(resultsList);
+            } else {
+                searchResultsDiv.innerHTML += '<p>No results found.</p>';
+            }
+        }
 
         // Call the function when the page loads to display search results
         window.onload = displaySearchResults;
@@ -168,6 +138,7 @@ function displaySearchResults() {
 </head>
 <body>
     <h1>Search Results</h1>
-<div id="search-results"></div>
+    <div id="search-results"></div>
 </body>
 </html>
+
