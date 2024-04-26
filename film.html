@@ -90,56 +90,14 @@
             max-width: 110%; /* Make the image responsive */
             height: auto;
         }
-	/* Media Query for landscape orientation and wider screens */
-@media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
-    body {
-        margin-left: 140px; /* Space on the left for everything except buttons */
-        margin-right: 240px; /* Space on the right for everything except buttons */
-        text-align: left; /* Align text to the left for desktop layout */
-    }
-    .buttons-container {
-        margin-left: -70px; /* Compensate for body margin on buttons */
-    }
-    .image-container {
-        float: left; /* Float the image to the left for desktop layout */
-        margin-right: 20px;
-    }
-    .clearfix {
-        margin-left: -100px; /* Compensate for body margin on text */
-    }
-    .button {
-        padding: 20px 10px; /* Reduced padding for other buttons */
-        font-size: medium; /* Smaller font size for other buttons */
-        margin-bottom: 20px;
-    }
-    .margin-right-large {
-        margin-right: 60px;
-    }
-    .centered-text {
-        margin-left: 30px;
-	margin-right: 20px
-    }
-}
-        /* Media Query for smaller screens (phones) */
-        @media screen (min-width: 800px) and (max-width: 1000px) {
-    body {
-        margin-left: 20px; /* Space on the left for everything except buttons */
-        margin-right: 20px; /* Space on the right for everything except buttons */
-        text-align: left; /* Align text to the left for desktop layout */
-    }
-    .image-container {
-        /* Remove float:left; to ensure the text appears below the image */
-        margin-bottom: 20px;
-    }
-    .clearfix {
-        margin-left: 0px; /* Compensate for body margin on text */
-    }
-            .button {
-       		padding: 20px 10px; /* Reduced padding for other buttons */
-        	font-size: medium; /* Smaller font size for other buttons */
-        	margin-bottom: 20px;
-                font-size: smaller; /* Smaller font size for all buttons on phones */
-            }
+
+        .centered-text {
+            margin-left: 30px;
+	    margin-right: 20px
+        }
+
+        .centered-text ul {
+            margin-left: 50px; /* Indent the list */
         }
     </style>
 </head>
@@ -159,7 +117,7 @@
 <div class="image-container" style="margin-left: 20px;">
     <img src="things_we_like.webp" alt="Adi Jahić" style="width: 113px; height: 160px; margin-right: 20px;">
 </div>
-<div style="margin-left: 20px;"> <!-- Adjust margin-left value according to your layout -->
+<div style="margin-left: 160px;"> <!-- Adjust margin-left value according to your layout -->
     <h3> 
         <a href="https://thingswelikefilm.com" target="_blank" style="color: #2137B2; text-decoration: none;">
             <strong>Things We Like, (2023)</strong>
@@ -168,7 +126,7 @@
     <p class="centered-text" style="margin-top: -10px;">
         <em> When Georgia meets a young man from Boston, Peter, she leaves her mundane life in suburban Vermont searching for something more. </em> 
     </p> 
-    <ul class="centered-text" style="margin-top: -10px; margin-left: 30px;">
+    <ul class="centered-text" style="margin-top: -10px;">
         <li>Premiered at the Philadelphia International Film Festival.</li>
         <li>Now available for streaming on <a href="https://vimeo.com/ondemand/thingswelike" target="_blank" style="text-decoration: underline; color: black;">Vimeo On Demand</a></li>
         <li>Duration: 1 hour and 45 minutes</li>
