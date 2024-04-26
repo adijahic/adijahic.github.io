@@ -81,6 +81,7 @@
             font-size: larger;
             margin-right: 10px; /* Reduced space between buttons */
         }
+
         .image-container {
             overflow: hidden; /* Clear float */
             margin-bottom: 20px; /* Add margin below image */
@@ -89,12 +90,11 @@
             max-width: 110%; /* Make the image responsive */
             height: auto;
         }
-
 	/* Media Query for landscape orientation and wider screens */
 @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
     body {
         margin-left: 140px; /* Space on the left for everything except buttons */
-        margin-right: 140px; /* Space on the right for everything except buttons */
+        margin-right: 240px; /* Space on the right for everything except buttons */
         text-align: left; /* Align text to the left for desktop layout */
     }
     .buttons-container {
@@ -112,9 +112,14 @@
         font-size: medium; /* Smaller font size for other buttons */
         margin-bottom: 20px;
     }
+    .margin-right-large {
+        margin-right: 60px;
+    }
+    .centered-text {
+        margin-left: 30px;
+	margin-right: 20px
+    }
 }
-
-
         /* Media Query for smaller screens (phones) */
         @media screen (min-width: 800px) and (max-width: 1000px) {
     body {
@@ -148,7 +153,16 @@
     </div>
 
     <h1>Film</h1>
-    <p>This is the Film page. Film content will be added here.<br>
-	For now, find my film work <a href="https://godspeedprod.wixsite.com/home" target="_blank" style="text-decoration: underline; color: black;">here!</a></p>
+    <p>You find my film work <a href="https://godspeedprod.wixsite.com/home" target="_blank" style="text-decoration: underline; color: black;">here!</a></p>
+
+    <h3> Films </h3>
+	<p class="centered-text"> 
+	<a href="https://vimeo.com/ondemand/thingswelike" target="_blank" style="color: #2137B2; text-decoration: none;">
+        <strong>Things We Like, (2023)</strong></a> </p> 
+	   <div class="margin-right-large" style="margin-left: 50px; margin-top: -10px;">
+            When Georgia meets a young man from Boston, Peter, she leaves her mundane life in suburban Vermont searching for something more. <br>
+            Premiered at the Philadelphia International Film Festival. <br> 
+	    Now available for streaming on Vimeo On Demand <br>
+	 </div>
 </body>
 </html>
