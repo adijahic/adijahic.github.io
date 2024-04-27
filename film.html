@@ -81,43 +81,64 @@
             font-size: larger;
             margin-right: 10px; /* Reduced space between buttons */
         }
-        .film-info {
-            margin-top: 20px; /* Added margin between film info sections */
-        }
         .image-container {
             overflow: hidden; /* Clear float */
             margin-bottom: 20px; /* Add margin below image */
-            margin-right: 20px; /* Add margin to the right of the image */
-            float: left; /* Float the image to the left */
         }
         .image-container img {
-            width: 226px; /* Set image width */
-            height: 320px; /* Set image height */
+            max-width: 110%; /* Make the image responsive */
+            height: auto;
         }
-        .film-description {
-            margin-left: 260px; /* Add margin to the left of the text to create space for the image */
+        /* Media Query for landscape orientation and wider screens */
+        @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
+            body {
+                margin-left: 140px; /* Space on the left for everything except buttons */
+                margin-right: 240px; /* Space on the right for everything except buttons */
+                text-align: left; /* Align text to the left for desktop layout */
+            }
+            .buttons-container {
+                margin-left: -70px; /* Compensate for body margin on buttons */
+            }
+            .image-container {
+                float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
+            }
+            .clearfix {
+                margin-left: -100px; /* Compensate for body margin on text */
+            }
+            .button {
+                padding: 20px 10px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+                margin-bottom: 20px;
+            }
+            .margin-right-large {
+                margin-right: 60px;
+            }
+            .centered-text {
+                margin-left: 30px;
+                margin-right: 20px;
+            }
         }
-        .film-description h3 {
-            font-size: larger;
-            margin-top: 0; /* Remove default margin from heading */
-            margin-bottom: 5px; /* Add margin below heading */
-        }
-        .film-description p {
-            margin-top: 0; /* Remove default margin from paragraph */
-            margin-bottom: 10px; /* Add margin below paragraph */
-        }
-        .film-description ul {
-            list-style: none; /* Remove default list style */
-            padding: 0; /* Remove default padding */
-            margin-top: 0; /* Remove default margin from list */
-            margin-bottom: 10px; /* Add margin below list */
-        }
-        .film-description ul li {
-            font-size: 80%;
-        }
-        .film-description ul li a {
-            color: #2137B2;
-            text-decoration: underline;
+        /* Media Query for smaller screens (phones) */
+        @media screen (min-width: 800px) and (max-width: 1000px) {
+            body {
+                margin-left: 20px; /* Space on the left for everything except buttons */
+                margin-right: 20px; /* Space on the right for everything except buttons */
+                text-align: left; /* Align text to the left for desktop layout */
+            }
+            .image-container {
+                float: left; /* Float the image to the left for desktop layout */
+                margin-right: 20px;
+            }
+            .clearfix {
+                margin-left: 0px; /* Compensate for body margin on text */
+            }
+            .button {
+                padding: 20px 10px; /* Reduced padding for other buttons */
+                font-size: medium; /* Smaller font size for other buttons */
+                margin-bottom: 20px;
+                font-size: smaller; /* Smaller font size for all buttons on phones */
+            }
         }
     </style>
 </head>
@@ -131,48 +152,43 @@
     </div>
 
     <h1>Film</h1>
-
-    <div class="film-info">
-        <div class="image-container">
-            <img src="thinking_habits.png" alt="Thinking Habits">
-        </div>
-        <div class="film-description">
-            <h3><strong>Thinking Habits (Forthcoming)</strong></h3>
-            <p><em>A raucous taxi driver pursues his musician dreams alongside his late friend's niece.</em></p>
-            <ul>
-                <li>Duration: ~1 hour and 30 minutes</li>
-                <li>An upcoming feature-length film to be filmed in July of 2024 starring Emma Kuhlman and Noel Prophet.</li>
-            </ul>
-        </div>
+    <p class="centered-text"> You can find my film work <a href="https://godspeedprod.wixsite.com/home" target="_blank" style="text-decoration: underline; color: black;">here!</a></p>
+<div>
+   <div class="image-container" style="margin-top: 10px;">
+        <img src="thinking_habits.png" alt="Thinking Habits"  style="width: 226px; height: 320px; margin-right: 20px;">
     </div>
-
-    <div class="film-info">
-        <div class="image-container">
-            <img src="things_we_like.webp" alt="Things We Like">
-        </div>
-        <div class="film-description">
-            <h3>
-                <a href="https://vimeo.com/ondemand/thingswelike" target="_blank" style="color: #2137B2; text-decoration: none;">
-                    <strong>Things We Like (2023)</strong>
-                </a>
-            </h3>
-            <p><em>When Georgia meets a young man from Boston, Peter, she leaves her mundane life in suburban Vermont searching for something more.</em></p>
-            <ul>
-                <li>Duration: 1 hour and 45 minutes</li>
-                <li>Premiered at the Philadelphia International Film Festival.</li>
-                <li>Find information about and reviews of the film <a href="https://thingswelikefilm.com" target="_blank">here</a>.</li>
-                <li>Media mentions:
-                    <a href="https://www.splittoothmedia.com/things-we-like-adi-jahic/" target="_blank">Split Tooth Media (Review)</a>,
-                    <a href="https://open.spotify.com/episode/3YdL1azsrtqrqccLCZCF5Q?si=Zw35sG4gQ_CVt68UVWdlKw" target="_blank">Split Tooth Media (Discussion)</a>,
-                    <a href="https://medium.com/@doctorquinncinemawoman/interview-with-adi-jahic-fb61903a89d7" target="_blank">To Each Their Own Cinema</a>,
-                    <a href="https://musiccitydrivein.com/2023/05/10/things-we-like-is-easy-to-love/" target="_blank">Music City Drive-In</a>,
-                    <a href="https://letterboxd.com/film/things-we-like/" target="_blank">Letterboxd Reviews</a>
-                </li>
-                <li>
-                    <a href="https://en.wikipedia.org/wiki/Andrew_Bujalski">Andrew Bujalski</a>: Everything I see about youth these days makes me grateful to no longer be in it myself - and lord knows if it takes place in Boston, all the more so... [Things We Like] brought all that stuff back for me with great vividness. The whole thing is quite fragile... but the viewer who gets on its frequency will be rewarded. The whole cast is terrific, and the quirky structure is quite engaging. It really works. I enjoyed this film.
-                </li>
-            </ul>
-        </div>
+<h3> 
+        <strong>Thinking Habits (Forthcoming)</strong>
+<div>
+</h3> 
+<p class="centered-text" style="margin-top: -10px;">
+    <em> A raucous taxi driver pursues his musician dreams alongside his late friend's niece. </em> <br>
+     Written and directed by Adi Jahić <br>
+</p> 
+<ul class="centered-text" style="margin-top: -10px; list-style: none; font-size: 80%;">
+    <li> -Duration: ~1 hour and 30 minutes </li>
+    <li> -An upcoming feature-length film to be filmed in July of 2024 starring Emma Kuhlman and Noel Prophet.</li>
+    </ul>
+</div>
+   <div class="image-container" style="margin-top: 10px;">
+        <img src="things_we_like.webp" alt="Things We Like"  style="width: 226px; height: 320px; margin-right: 20px;">
     </div>
+<h3> 
+    <a href="https://vimeo.com/ondemand/thingswelike" target="_blank" style="color: #2137B2; text-decoration: none;">
+        <strong>Things We Like (2023)</strong>
+    </a>
+</h3> 
+<p class="centered-text" style="margin-top: -10px;">
+    <em> When Georgia meets a young man from Boston, Peter, she leaves her mundane life in suburban Vermont searching for something more. </em> <br>
+     Written and directed by Adi Jahić <br>
+</p> 
+<ul class="centered-text" style="margin-top: -10px; list-style: none; font-size: 80%;">
+    <li> Duration: 1 hour and 45 minutes </li>
+    <li> -Premiered at the Philadelphia International Film Festival.</li>
+    <li> -Find information about and reviews of the film <a href="https://thingswelikefilm.com" target="_blank" style="text-decoration: underline; color: #2137B2;">here</a>.</li>
+    <li> -Media mentions: <a href="https://www.splittoothmedia.com/things-we-like-adi-jahic/" target="_blank" style="text-decoration: underline; color: #2137B2;">Split Tooth Media (Review)</a>, <a href="https://open.spotify.com/episode/3YdL1azsrtqrqccLCZCF5Q?si=Zw35sG4gQ_CVt68UVWdlKw" target="_blank" style="text-decoration: underline; color: #2137B2;">Split Tooth Media (Discussion)</a>, <a href="https://medium.com/@doctorquinncinemawoman/interview-with-adi-jahic-fb61903a89d7" target="_blank" style="text-decoration: underline; color: #2137B2;">To Each Their Own Cinema</a>, <a href="https://musiccitydrivein.com/2023/05/10/things-we-like-is-easy-to-love/" target="_blank" style="text-decoration: underline; color: #2137B2;">Music City Drive-In</a>, <a href="https://letterboxd.com/film/things-we-like/" target="_blank" style="text-decoration: underline; color: #2137B2;">Letterboxd Reviews</a></li>
+    <li> -<a href="https://en.wikipedia.org/wiki/Andrew_Bujalski" style="text-decoration: underline; color: #2137B2;">Andrew Bujalski </a>: Everything I see about youth these days makes me grateful to no longer be in it myself - and lord knows if it takes place in Boston, all the more so... [Things We Like] brought all that stuff back for me with great vividness. The whole thing is quite fragile... but the viewer who gets on its frequency will be rewarded. The whole cast is terrific, and the quirky structure is quite engaging. It really works. I enjoyed this film.</li>
+</ul>
+
 </body>
 </html>
