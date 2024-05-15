@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /search-results.html
+Disallow: /*.png$
+Disallow: /Behavioral_Development_Chapter.pdf
+Disallow: /Risk_Sharing_Chapter.pdf
+Sitemap: https://adijahic.github.io/sitemap.xml
