@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Adi Jahić: Economics PhD student and Filmmaker</title>
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Meta Description -->
-    <meta name="description" content="Adi Jahic is a PhD student studying Economics at Brown University and an independent filmmaker. Learn about his research interests in Behavioral and Development Economics with a focus on social networks, and his award-winning films.">
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://www.adijahic.github.io">
-    <meta http-equiv="Cache-control" content="public, max-age=604800">  
-    <meta property="og:site_name" content="Adi Jahić">
-    <meta name="name" content="Adi Jahić">
-    <meta name="author" content="Adi Jahić"> <!-- Specify author for search engines -->
-    <meta name="robots" content="index, follow"> <!-- Allow search engine indexing -->
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adi Jahić: Economics PhD student and Filmmaker</title>
+  <!-- Favicon links remain unchanged -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Meta Description -->
+  <meta name="description" content="Adi Jahic is a PhD student studying Economics at Brown University and an independent filmmaker. Learn about his research interests in Behavioral and Development Economics with a focus on social networks, and his award-winning films.">
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.adijahic.github.io">
+  <meta http-equiv="Cache-control" content="public, max-age=604800">  
+  <meta property="og:site_name" content="Adi Jahić">
+  <meta name="name" content="Adi Jahić">
+  <meta name="author" content="Adi Jahić">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Bootstrap CSS added for the search bar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
@@ -37,8 +43,9 @@
         "https://letterboxd.com/godspeed_aj/"
       ]
     }
-    </script>
-    <script>
+  </script>
+  
+  <script>
     function search() {
         var query = document.getElementById('search-input').value;
         var encodedQuery = encodeURIComponent(query); // Encode the search query
@@ -49,16 +56,17 @@
         var encodedQuery = encodeURIComponent(query); // Encode the search query
         window.location.href = 'search-results.html?q=' + encodedQuery; // Redirect to search-results.html with the search query parameter
     }
-    </script>
-    <style>
+  </script>
+  
+  <style>
     body {
         font-family: "Times New Roman", Times, serif;
-        margin-top: 0.2in; /* 1 inch margin at the top */
-        margin-left: 30px; /* Space on the left for mobile */
-        margin-right: 30px; /* Space on the right for mobile */
-        text-align: left; /* Center align buttons */
-        margin-bottom: 20px; /* Additional white space at the bottom */
-        background-color: #FDFDF8; /* Very light eggshell color */
+        margin-top: 0.2in;
+        margin-left: 30px;
+        margin-right: 30px;
+        text-align: left;
+        margin-bottom: 20px;
+        background-color: #FDFDF8;
     }
     h2 {
         font-weight: bold;
@@ -73,130 +81,127 @@
         border: none;
         color: #606060;
         display: inline-block;
-        margin-right: 5px; /* Reduced space between buttons */
-        margin-left: 0; /* Align buttons to the left */
+        margin-right: 5px;
+        margin-left: 0;
         cursor: pointer;
         padding: 2px 2px;
         font-size: medium;
         text-decoration: none;
         border-radius: 5px;
-        font-family: sans-serif; /* Sans-serif font */
+        font-family: sans-serif;
         margin-bottom: 20px;
     }
     .button:first-child {
         font-size: larger;
-        margin-right: 10px; /* Reduced space between buttons */
+        margin-right: 10px;
         font-weight: bold;
     }
     .image-container {
-        overflow: hidden; /* Clear float */
-        margin-bottom: 20px; /* Add margin below image */
+        overflow: hidden;
+        margin-bottom: 20px;
     }
     .image-container img {
-        max-width: 110%; /* Make the image responsive */
+        max-width: 110%;
         height: auto;
     }
-    /* Media Query for landscape orientation and wider screens */
     @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
         body {
-            margin-left: 140px; /* Space on the left for everything except buttons */
-            margin-right: 140px; /* Space on the right for everything except buttons */
-            text-align: left; /* Align text to the left for desktop layout */
+            margin-left: 140px;
+            margin-right: 140px;
+            text-align: left;
         }
         .buttons-container {
-            margin-left: -70px; /* Compensate for body margin on buttons */
+            margin-left: -70px;
         }
         .image-container {
-            float: left; /* Float the image to the left for desktop layout */
+            float: left;
             margin-right: 20px;
         }
         .clearfix {
-            margin-left: -100px; /* Compensate for body margin on text */
+            margin-left: -100px;
         }
         .button {
-            padding: 20px 10px; /* Reduced padding for other buttons */
-            font-size: medium; /* Smaller font size for other buttons */
+            padding: 20px 10px;
+            font-size: medium;
             margin-bottom: 20px;
         }
     }
-    /* Media Query for smaller screens (phones) */
     @media screen (min-width: 800px) and (max-width: 1000px) {
         body {
-            margin-left: 20px; /* Space on the left for everything except buttons */
-            margin-right: 20px; /* Space on the right for everything except buttons */
-            text-align: left; /* Align text to the left for desktop layout */
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
         }
         .image-container {
-            float: left; /* Float the image to the left for desktop layout */
+            float: left;
             margin-right: 20px;
         }
         .clearfix {
-            margin-left: 0px; /* Compensate for body margin on text */
+            margin-left: 0px;
         }
         .button {
-            padding: 20px 10px; /* Reduced padding for other buttons */
-            font-size: medium; /* Smaller font size for other buttons */
+            padding: 20px 10px;
+            font-size: smaller;
             margin-bottom: 20px;
-            font-size: smaller; /* Smaller font size for all buttons on phones */
         }
     }
-    </style>
+  </style>
 </head>
 <body>
-    <!-- Buttons -->
-    <nav class="buttons-container">
+  <!-- Navigation buttons remain unchanged -->
+  <nav class="buttons-container">
     <a href="/" class="button">Home</a>
     <a href="research.html" class="button">Research</a>
     <a href="film.html" class="button">Film</a>
     <a href="AdiJahic_CV.pdf" target="_blank" class="button">CV</a>
-    </nav>
-    <div class="image-container">
-        <img src="adi-jahic-3.png" alt="Adi Jahić"  style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
+  </nav>
+  
+  <div class="image-container">
+    <img src="adi-jahic-3.png" alt="Adi Jahić" style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
+  </div>
+  
+  <div class="clearfix" style="margin-top:40px">
+    <h1>Adi Jahić</h1>
+    <h2>About Me:</h2>
+    <p>
+      Hello! I am a PhD student studying Economics at Brown University.
+      My research interests are at the intersection of Behavioral and Development Economics, with a focus on understanding the role of social networks.
+      Previously, I was an undergraduate research assistant for Raymond Fisman at Boston University, then a pre-doctoral fellow for Shing-Yi Wang 
+      and Susanna Berkouwer at Wharton's Business Economics and Public Policy Department.
+    </p>
+    <p>
+      I am also an award-winning independent filmmaker, having made feature-length films that have played in theaters and festivals in the U.S. and abroad.
+    </p>
+    <h2>Contact: </h2>
+    <p>
+      Box B, Brown University, Providence, RI 02912-B<br>
+      adijahic at brown.edu <br>
+      <br>
+      <a href="https://twitter.com/adijahic" target="_blank" style="margin-right: 9px; margin-bottom: 20px; color: white;">
+        <img src="twitter_logo.png" alt="Twitter Logo" width="25px" height="25px">
+      </a>
+      <a href="https://www.linkedin.com/in/adi-jahi%C4%87-4168b2b4/" target="_blank" style="margin-right: 10px; color: white;">
+        <img src="linkedin_logo.png" alt="LinkedIn Logo" width="25px" height="25px">
+      </a> 
+      <a href="https://letterboxd.com/godspeed_aj/" target="_blank" style="margin-right: 10px; color: white;">
+        <img src="letterboxd_logo.png" alt="Letterboxd Logo" width="25px" height="25px">
+      </a> 
+      <br>
+      <br>
+    </p>
+  </div>
+  
+  <!-- Bootstrap-styled search bar inserted below -->
+  <div class="container mt-4">
+    <div class="input-group">
+      <input type="text" class="form-control" id="search-input" placeholder="Search..." aria-label="Search">
+      <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
     </div>
-    <div class="clearfix" style="margin-top:40px">
-        <h1>Adi Jahić</h1>
-
-        <h2>About Me:</h2>
-        <p>
-            Hello! I am a PhD student studying Economics at Brown University.
-            My research interests are at the intersection of Behavioral and Development Economics, with a focus on understanding the role of social networks.
-            Previously, I was an undergraduate research assistant for Raymond Fisman at Boston University, then a pre-doctoral fellow for Shing-Yi Wang 
-and Susanna Berkouwer at Wharton's Business Economics and Public Policy Department.
-        </p>
-
-        <p>
-            I am also an award-winning independent filmmaker, having made feature-length films that have played in theaters and festivals in the U.S. and abroad.
-        </p>
-
-        <h2>Contact: </h2>
-
-        <p>
-            Box B, Brown University, Providence, RI 02912-B<br>
-            adijahic at brown.edu <br>
-	<br>
-        <a href="https://twitter.com/adijahic" target="_blank" style="margin-right: 9px; margin-bottom: 20px; color: white;">
-            <img src="twitter_logo.png" alt="Twitter Logo" width="25px" height="25px">
-        </a>
-        <a href="https://www.linkedin.com/in/adi-jahi%C4%87-4168b2b4/" target="_blank" style="margin-right: 10px; color: white;">
-            <img src="linkedin_logo.png" alt="LinkedIn Logo" width="25px" height="25px">
-        </a> 
-        <a href="https://letterboxd.com/godspeed_aj/" target="_blank" style="margin-right: 10px; color: white;">
-            <img src="letterboxd_logo.png" alt="Letterboxd Logo" width="25px" height="25px">
-        </a> 
-	<br>
-	<br>
-	</p>
-    </div>
-
-<!-- Your comment goes here 
-
-<div class="search-container">
-    <input type="text" id="search-input" placeholder="Search...">
-    <button onclick="search()">Search</button>
-</div> -->
-
+  </div>
+  
 </body>
 </html>
+
 
 
 
