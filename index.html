@@ -194,29 +194,35 @@
   </div>
 </nav>
 
-<!-- Your comment goes here 
 
 <script>
   // Get the current page URL
   var currentPage = window.location.pathname;
 
-  // Function to add "active" class to the correct nav link
+  // Function to add "fw-bold" class and increase font size for the active nav link
   function setActiveNavLink() {
+    let activeLink;
+    
     if (currentPage.includes("research.html")) {
-      document.getElementById("research-link").classList.add("fw-bold");
+      activeLink = document.getElementById("research-link");
     } else if (currentPage.includes("film.html")) {
-      document.getElementById("film-link").classList.add("fw-bold");
+      activeLink = document.getElementById("film-link");
     } else if (currentPage.includes("AdiJahic_CV.pdf")) {
-      document.getElementById("cv-link").classList.add("fw-bold");
+      activeLink = document.getElementById("cv-link");
     } else {
-      document.getElementById("home-link").classList.add("fw-bold");
+      activeLink = document.getElementById("home-link");
+    }
+
+    if (activeLink) {
+      activeLink.classList.add("fw-bold");
+      activeLink.style.fontSize = "larger"; // Increase font size
     }
   }
 
   // Run function when page loads
   setActiveNavLink();
 </script>
--->
+
 
 
 
