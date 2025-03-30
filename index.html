@@ -162,7 +162,7 @@
   <div class="container-fluid">
     <!-- Logo on the left -->
     <a class="navbar-brand" href="/">
-      <img src="Brown-University-Seal.png" alt="Brown University Seal" width="40px" height="40px" style="margin-right: 10px;">
+      <img src="Brown-University-Seal.png" alt="Brown University Seal" width="40px" height="40px" style="margin-right: 4px;">
     </a>
     
     <!-- Navbar Toggle Button (for mobile) -->
@@ -177,38 +177,8 @@
       <a href="film.html" class="nav-link button">Film</a>
       <a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a>
     </div>
-
-    <!-- Search Button (Magnifying Glass) -->
-    <button class="btn btn-outline-secondary ms-auto" id="search-toggle" style="border: none; background: transparent;">
-      <img src="search-icon.png" alt="Search" width="20px" height="20px">
-    </button>
-
-    <!-- Search Bar (Initially Hidden) -->
-    <form class="d-flex ms-2" id="search-form" style="display: none;" onsubmit="searchSite(); return false;">
-      <input class="form-control" type="search" id="search-input" placeholder="Search..." aria-label="Search">
-      <button class="btn btn-outline-success ms-2" type="submit">Go</button>
-    </form>
   </div>
 </nav>
-
-<script>
-  // Toggle search bar visibility when clicking the search button
-  document.getElementById("search-toggle").addEventListener("click", function () {
-      var searchForm = document.getElementById("search-form");
-      if (searchForm.style.display === "none") {
-          searchForm.style.display = "flex";
-      } else {
-          searchForm.style.display = "none";
-      }
-  });
-
-  // Handle search function
-  function searchSite() {
-      var query = document.getElementById('search-input').value;
-      var encodedQuery = encodeURIComponent(query);
-      window.location.href = 'search-results.html?q=' + encodedQuery;
-  }
-</script>
 
 
 
