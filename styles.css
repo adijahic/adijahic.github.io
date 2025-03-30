@@ -46,31 +46,13 @@ h3 {
     font-size: larger; /* Make the "Home" link larger */
 }
 .navbar {
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+    margin-top: 10px; /* Add top margin */
     background-color: transparent;
     padding: 0;
 }
 .nav-link:hover {
     font-weight: bold;
-}
-.button {
-    background-color: transparent;
-    border: none;
-    color: #606060;
-    display: inline-block;
-    margin-right: 5px;
-    margin-left: 0;
-    cursor: pointer;
-    padding: 2px 2px;
-    font-size: medium;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-    margin-bottom: 20px;
-}
-.button:first-child {
-    font-size: larger;
-    margin-right: 10px;
 }
 .image-container {
     overflow: hidden;
