@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adi Jahić: Economics PhD student and Filmmaker</title>
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" type="image/png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <!-- Meta Description -->
-  <meta name="description" content="Adi Jahic is a PhD student studying Economics at Brown University and an independent filmmaker. Learn about his research interests in Behavioral and Development Economics with a focus on social networks, and his award-winning films.">
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.adijahic.github.io">
-  <meta http-equiv="Cache-control" content="public, max-age=604800">  
-  <meta property="og:site_name" content="Adi Jahić">
-  <meta name="name" content="Adi Jahić">
-  <meta name="author" content="Adi Jahić">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Bootstrap CSS and JS for responsive navbar -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script type="application/ld+json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Adi Jahić: Economics PhD student and Filmmaker</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Meta Description -->
+    <meta name="description" content="Adi Jahic is a PhD student studying Economics at Brown University and an independent filmmaker. Learn about his research interests in Behavioral and Development Economics with a focus on social networks, and his award-winning films.">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.adijahic.github.io">
+    <meta http-equiv="Cache-control" content="public, max-age=604800">  
+    <meta property="og:site_name" content="Adi Jahić">
+    <meta name="name" content="Adi Jahić">
+    <meta name="author" content="Adi Jahić"> <!-- Specify author for search engines -->
+    <meta name="robots" content="index, follow"> <!-- Allow search engine indexing -->
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
@@ -42,172 +43,175 @@
         "https://letterboxd.com/godspeed_aj/"
       ]
     }
-  </script>
-  
-  <script>
+    </script>
+    
+    <script>
     function search() {
-      var query = document.getElementById('search-input').value;
-      var encodedQuery = encodeURIComponent(query);
-      window.location.href = 'search-results.html?q=' + encodedQuery;
+        var query = document.getElementById('search-input').value;
+        var encodedQuery = encodeURIComponent(query); // Encode the search query
+        window.location.href = 'search-results.html?q=' + encodedQuery; // Redirect to search-results.html with the search query parameter
     }
     function searchSite() {
-      var query = document.getElementById('search-input').value;
-      var encodedQuery = encodeURIComponent(query);
-      window.location.href = 'search-results.html?q=' + encodedQuery;
+        var query = document.getElementById('search-input').value;
+        var encodedQuery = encodeURIComponent(query); // Encode the search query
+        window.location.href = 'search-results.html?q=' + encodedQuery; // Redirect to search-results.html with the search query parameter
     }
-  </script>
-  
-  <style>
+    </script>
+    <style>
     body {
-      font-family: "Times New Roman", Times, serif;
-      margin-top: 0.2in;
-      margin-left: 30px;
-      margin-right: 30px;
-      text-align: left;
-      margin-bottom: 20px;
-      background-color: #FDFDF8;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 0.2in; /* 1 inch margin at the top */
+        margin-left: 30px; /* Space on the left for mobile */
+        margin-right: 30px; /* Space on the right for mobile */
+        text-align: left; /* Center align buttons */
+        margin-bottom: 20px; /* Additional white space at the bottom */
+        background-color: #FDFDF8; /* Very light eggshell color */
     }
     h2 {
-      font-weight: bold;
+        font-weight: bold;
     }
     .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
+        content: "";
+        display: table;
+        clear: both;
     }
     .button {
-      background-color: transparent;
-      border: none;
-      color: #606060;
-      display: inline-block;
-      margin-right: 5px;
-      margin-left: 0;
-      cursor: pointer;
-      padding: 2px 2px;
-      font-size: medium;
-      text-decoration: none;
-      border-radius: 5px;
-      font-family: sans-serif;
-      margin-bottom: 20px;
+        background-color: transparent;
+        border: none;
+        color: #606060;
+        display: inline-block;
+        margin-right: 5px; /* Reduced space between buttons */
+        margin-left: 0; /* Align buttons to the left */
+        cursor: pointer;
+        padding: 2px 2px;
+        font-size: medium;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: sans-serif; /* Sans-serif font */
+        margin-bottom: 20px;
     }
     .button:first-child {
-      font-size: larger;
-      margin-right: 10px;
-      font-weight: bold;
+        font-size: larger;
+        margin-right: 10px; /* Reduced space between buttons */
+        font-weight: bold;
     }
     .image-container {
-      overflow: hidden;
-      margin-bottom: 20px;
+        overflow: hidden; /* Clear float */
+        margin-bottom: 20px; /* Add margin below image */
     }
     .image-container img {
-      max-width: 110%;
-      height: auto;
+        max-width: 110%; /* Make the image responsive */
+        height: auto;
     }
     /* Media Query for landscape orientation and wider screens */
     @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
-      body {
-        margin-left: 140px;
-        margin-right: 140px;
-        text-align: left;
-      }
-      .buttons-container {
-        margin-left: -70px;
-      }
-      .image-container {
-        float: left;
-        margin-right: 20px;
-      }
-      .clearfix {
-        margin-left: -100px;
-      }
-      .button {
-        padding: 20px 10px;
-        font-size: medium;
-        margin-bottom: 20px;
-      }
+        body {
+            margin-left: 140px; /* Space on the left for everything except buttons */
+            margin-right: 140px; /* Space on the right for everything except buttons */
+            text-align: left; /* Align text to the left for desktop layout */
+        }
+        .buttons-container {
+            margin-left: -70px; /* Compensate for body margin on buttons */
+        }
+        .image-container {
+            float: left; /* Float the image to the left for desktop layout */
+            margin-right: 20px;
+        }
+        .clearfix {
+            margin-left: -100px; /* Compensate for body margin on text */
+        }
+        .button {
+            padding: 20px 10px; /* Reduced padding for other buttons */
+            font-size: medium; /* Smaller font size for other buttons */
+            margin-bottom: 20px;
+        }
     }
     /* Media Query for smaller screens (phones) */
-    @media screen and (min-width: 800px) and (max-width: 1000px) {
-      body {
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: left;
-      }
-      .image-container {
-        float: left;
-        margin-right: 20px;
-      }
-      .clearfix {
-        margin-left: 0px;
-      }
-      .button {
-        padding: 20px 10px;
-        font-size: smaller;
-        margin-bottom: 20px;
-      }
+    @media screen (min-width: 800px) and (max-width: 1000px) {
+        body {
+            margin-left: 20px; /* Space on the left for everything except buttons */
+            margin-right: 20px; /* Space on the right for everything except buttons */
+            text-align: left; /* Align text to the left for desktop layout */
+        }
+        .image-container {
+            float: left; /* Float the image to the left for desktop layout */
+            margin-right: 20px;
+        }
+        .clearfix {
+            margin-left: 0px; /* Compensate for body margin on text */
+        }
+        .button {
+            padding: 20px 10px; /* Reduced padding for other buttons */
+            font-size: medium; /* Smaller font size for other buttons */
+            margin-bottom: 20px;
+            font-size: smaller; /* Smaller font size for all buttons on phones */
+        }
     }
-  </style>
+    </style>
 </head>
+
 <body>
-  <!-- Updated Responsive Navigation Bar using Bootstrap -->
-  <nav class="navbar navbar-expand-sm" style="background-color: transparent; padding: 0;">
-    <div class="container-fluid">
-      <!-- Brand placeholder (hidden if not needed) -->
-      <a class="navbar-brand d-none" href="#">Brand</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
-              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" 
-              style="border: none; background: transparent;">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse buttons-container" id="navbarResponsive">
-        <a href="/" class="nav-link button">Home</a>
-        <a href="research.html" class="nav-link button">Research</a>
-        <a href="film.html" class="nav-link button">Film</a>
-        <a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a>
-      </div>
+<nav class="navbar navbar-expand-sm" style="background-color: transparent; padding: 0;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse buttons-container" id="navbarClear">
+      <a href="/" class="nav-link button">Home</a>
+      <a href="research.html" class="nav-link button">Research</a>
+      <a href="film.html" class="nav-link button">Film</a>
+      <a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a>
     </div>
-  </nav>
-  
-  <div class="image-container">
-    <img src="adi-jahic-3.png" alt="Adi Jahić" style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
   </div>
-  
-  <div class="clearfix" style="margin-top:40px">
-    <h1>Adi Jahić</h1>
-    <h2>About Me:</h2>
-    <p>
-      Hello! I am a PhD student studying Economics at Brown University.
-      My research interests are at the intersection of Behavioral and Development Economics, with a focus on understanding the role of social networks.
-      Previously, I was an undergraduate research assistant for Raymond Fisman at Boston University, then a pre-doctoral fellow for Shing-Yi Wang 
-      and Susanna Berkouwer at Wharton's Business Economics and Public Policy Department.
-    </p>
-    <p>
-      I am also an award-winning independent filmmaker, having made feature-length films that have played in theaters and festivals in the U.S. and abroad.
-    </p>
-    <h2>Contact: </h2>
-    <p>
-      Box B, Brown University, Providence, RI 02912-B<br>
-      adijahic at brown.edu <br>
-      <br>
-      <a href="https://twitter.com/adijahic" target="_blank" style="margin-right: 9px; margin-bottom: 20px; color: white;">
-        <img src="twitter_logo.png" alt="Twitter Logo" width="25px" height="25px">
-      </a>
-      <a href="https://www.linkedin.com/in/adi-jahi%C4%87-4168b2b4/" target="_blank" style="margin-right: 10px; color: white;">
-        <img src="linkedin_logo.png" alt="LinkedIn Logo" width="25px" height="25px">
-      </a> 
-      <a href="https://letterboxd.com/godspeed_aj/" target="_blank" style="margin-right: 10px; color: white;">
-        <img src="letterboxd_logo.png" alt="Letterboxd Logo" width="25px" height="25px">
-      </a> 
-      <br>
-      <br>
-    </p>
-  </div>
-  
-  <!-- The rest of your content remains unchanged -->
-  
+</nav>
+
+    <div class="image-container">
+        <img src="adi-jahic-3.png" alt="Adi Jahić"  style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
+    </div>
+    <div class="clearfix" style="margin-top:40px">
+        <h1>Adi Jahić</h1>
+
+        <h2>About Me:</h2>
+        <p>
+            Hello! I am a PhD student studying Economics at Brown University.
+            My research interests are at the intersection of Behavioral and Development Economics, with a focus on understanding the role of social networks.
+            Previously, I was an undergraduate research assistant for Raymond Fisman at Boston University, then a pre-doctoral fellow for Shing-Yi Wang 
+and Susanna Berkouwer at Wharton's Business Economics and Public Policy Department.
+        </p>
+
+        <p>
+            I am also an award-winning independent filmmaker, having made feature-length films that have played in theaters and festivals in the U.S. and abroad.
+        </p>
+
+        <h2>Contact: </h2>
+
+        <p>
+            Box B, Brown University, Providence, RI 02912-B<br>
+            adijahic at brown.edu <br>
+	<br>
+        <a href="https://twitter.com/adijahic" target="_blank" style="margin-right: 9px; margin-bottom: 20px; color: white;">
+            <img src="twitter_logo.png" alt="Twitter Logo" width="25px" height="25px">
+        </a>
+        <a href="https://www.linkedin.com/in/adi-jahi%C4%87-4168b2b4/" target="_blank" style="margin-right: 10px; color: white;">
+            <img src="linkedin_logo.png" alt="LinkedIn Logo" width="25px" height="25px">
+        </a> 
+        <a href="https://letterboxd.com/godspeed_aj/" target="_blank" style="margin-right: 10px; color: white;">
+            <img src="letterboxd_logo.png" alt="Letterboxd Logo" width="25px" height="25px">
+        </a> 
+	<br>
+	<br>
+	</p>
+    </div>
+
+<!-- Your comment goes here 
+
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button onclick="search()">Search</button>
+</div> -->
+
 </body>
 </html>
-
 
 
 
