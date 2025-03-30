@@ -46,8 +46,8 @@ h3 {
     font-size: larger; /* Make the "Home" link larger */
 }
 .navbar {
-    margin-bottom: 30px;
-    margin-top: 10px; /* Add top margin */
+    margin-bottom: 40px;
+    margin-top: 20px; /* Add top margin */
     background-color: transparent;
     padding: 0;
 }
