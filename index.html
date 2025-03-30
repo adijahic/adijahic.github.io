@@ -20,12 +20,6 @@
     <meta name="name" content="Adi Jahić">
     <meta name="author" content="Adi Jahić"> <!-- Specify author for search engines -->
     <meta name="robots" content="index, follow"> <!-- Allow search engine indexing -->
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -44,7 +38,6 @@
       ]
     }
     </script>
-    
     <script>
     function search() {
         var query = document.getElementById('search-input').value;
@@ -149,22 +142,15 @@
     }
     </style>
 </head>
-
 <body>
-<nav class="navbar navbar-expand-sm" style="background-color: transparent; padding: 0;">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse buttons-container" id="navbarClear">
-      <a href="/" class="nav-link button">Home</a>
-      <a href="research.html" class="nav-link button">Research</a>
-      <a href="film.html" class="nav-link button">Film</a>
-      <a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a>
-    </div>
-  </div>
-</nav>
 
+    <!-- Buttons -->
+    <nav class="buttons-container">
+    <a href="/" class="button">Home</a>
+    <a href="research.html" class="button">Research</a>
+    <a href="film.html" class="button">Film</a>
+    <a href="AdiJahic_CV.pdf" target="_blank" class="button">CV</a>
+    </nav>
     <div class="image-container">
         <img src="adi-jahic-3.png" alt="Adi Jahić"  style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
     </div>
