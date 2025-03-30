@@ -116,7 +116,7 @@
 
    // Highlight the searched text on the target page
    function highlightText(query) {
-       const elements = document.body.querySelectorAll("*:not(script):not(style)");
+       const elements = document.body.querySelectorAll("*:not(script):not(style):not(nav):not(.navbar):not(#navbar)");
        elements.forEach((element) => {
            element.childNodes.forEach((node) => {
                if (node.nodeType === 3) { // Text node
@@ -133,11 +133,26 @@
        });
    }
 
-   window.addEventListener("load", () => {
-       const urlParams = new URLSearchParams(window.location.search);
-       const searchQuery = urlParams.get("search");
+   document.body.addEventListener("click", (event) => {
+    if (event.target.classList.contains("search-result-link")) {
+        event.preventDefault(); // Prevent default navigation
+        const searchQuery = searchBar.value.trim();
+        if (searchQuery) {
+            sessionStorage.setItem("searchQuery", searchQuery); // Store the search query
+        }
+        window.location.href = event.target.href; // Manually navigate
+    }
+});
 
-       if (searchQuery) {
-           highlightText(searchQuery);
-       }
-   });
+   window.addEventListener("load", () => {
+    let searchQuery = new URLSearchParams(window.location.search).get("search");
+
+    if (!searchQuery) {
+        searchQuery = sessionStorage.getItem("searchQuery"); // Retrieve stored query
+        sessionStorage.removeItem("searchQuery"); // Clear it after use
+    }
+
+    if (searchQuery) {
+        highlightText(searchQuery);
+    }
+});
