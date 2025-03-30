@@ -5,7 +5,7 @@ body {
     margin-right: 30px;
     text-align: left;
     margin-bottom: 20px;
-    background-color: #FDFDF8;
+    background-color: #FFFBEA;
 }
 h1 {
     font-weight: bold;
@@ -75,20 +75,12 @@ h3 {
         margin-right: 140px;
         text-align: left;
     }
-    .buttons-container {
-        margin-left: -70px;
-    }
     .image-container {
         float: left;
         margin-right: 20px;
     }
     .clearfix {
         margin-left: -100px;
-    }
-    .button {
-        padding: 20px 10px;
-        font-size: medium;
-        margin-bottom: 20px;
     }
 }
 @media screen (min-width: 800px) and (max-width: 1000px) {
@@ -103,10 +95,5 @@ h3 {
     }
     .clearfix {
         margin-left: 0px;
-    }
-    .button {
-        padding: 20px 10px;
-        font-size: smaller;
-        margin-bottom: 20px;
     }
 }
