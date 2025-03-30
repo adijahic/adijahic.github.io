@@ -77,139 +77,16 @@
         </div>
     </nav>
       
-      
-      <script>
-        // Get the current page URL
-        var currentPage = window.location.pathname;
-      
-        // Function to add "fw-bold" class and increase font size for the active nav link
-        function setActiveNavLink() {
-          let activeLink;
-          
-          if (currentPage.includes("research.html")) {
-            activeLink = document.getElementById("research-link");
-          } else if (currentPage.includes("film.html")) {
-            activeLink = document.getElementById("film-link");
-          } else if (currentPage.includes("AdiJahic_CV.pdf")) {
-            activeLink = document.getElementById("cv-link");
-          } else {
-            activeLink = document.getElementById("home-link");
-          }
-      
-          if (activeLink) {
-            activeLink.classList.add("fw-bold");
-          }
-        }
-      
-        // Run function when page loads
-        setActiveNavLink();
-      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-<script>
-    // Toggle the search bar when the magnifying glass is clicked
-    const searchIcon = document.getElementById("search-icon");
-    const searchBar = document.getElementById("search-bar");
-
-    searchIcon.addEventListener("click", () => {
-        if (searchBar.style.display === "none" || searchBar.style.display === "") {
-            searchBar.style.display = "block";
-            searchBar.focus();
-        } else {
-            searchBar.style.display = "none";
-            clearSearchResults();
-        }
-    });
-
-    // Clear search results
-    function clearSearchResults() {
-        const searchResults = document.getElementById("search-results");
-        if (searchResults) {
-            searchResults.remove();
-        }
-    }
-
-    // Perform the search dynamically as the user types
-    searchBar.addEventListener("input", async () => {
-        const query = searchBar.value.toLowerCase();
-        const pages = [
-            { name: "Home", url: "/" },
-            { name: "Research", url: "research.html" },
-            { name: "Film", url: "film.html" },
-            { name: "CV", url: "AdiJahic_CV.pdf" }
-        ];
-
-        clearSearchResults();
-
-        if (query.trim() === "") {
-            return; // Do nothing if the search bar is empty
-        }
-
-        const results = [];
-
-        // Fetch and search each page's content
-        for (const page of pages) {
-            try {
-                const response = await fetch(page.url);
-                const text = await response.text();
-
-                // Check if the query exists in the page content
-                if (text.toLowerCase().includes(query)) {
-                    results.push(page);
-                }
-            } catch (error) {
-                console.error(`Failed to fetch ${page.url}:`, error);
-            }
-        }
-
-        // Display results
-        if (results.length > 0) {
-            const resultLinks = results
-                .map(
-                    (result) =>
-                        `<a href="${result.url}?search=${encodeURIComponent(query)}" class="search-result-link">${result.name}</a>`
-                )
-                .join("");
-            const resultsContainer = `<div id="search-results" class="search-results">${resultLinks}</div>`;
-            document.body.insertAdjacentHTML("beforeend", resultsContainer);
-        }
-    });
-
-    // Highlight the searched text on the target page
-    function highlightText(query) {
-        const elements = document.body.querySelectorAll("*:not(script):not(style)");
-        elements.forEach((element) => {
-            element.childNodes.forEach((node) => {
-                if (node.nodeType === 3) { // Text node
-                    const text = node.nodeValue;
-                    const regex = new RegExp(`(${query})`, "gi");
-                    if (regex.test(text)) {
-                        const highlightedText = text.replace(regex, '<span style="background-color: yellow;">$1</span>');
-                        const span = document.createElement("span");
-                        span.innerHTML = highlightedText;
-                        node.replaceWith(span);
-                    }
-                }
-            });
-        });
-    }
-
-    window.addEventListener("load", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const searchQuery = urlParams.get("search");
-
-        if (searchQuery) {
-            highlightText(searchQuery);
-        }
-    });
-</script>
+    <script src="scripts.js"></script>
 
     <h1 style="margin-top: 50px;">Research</h1>
     <p class="centered-text"> My research interests are at the intersection of <a href="Behavioral_Development_Chapter.pdf" target ="_blank" style="text-decoration: underline; color: #2137B2;">Behavioral and Development Economics</a>, with a focus on <a href="https://academic.oup.com/edited-volume/28058" target ="_blank" style="text-decoration: underline; color: #2137B2;">social networks</a>. I plan to empirically study how social networks and behavioral factors influence learning, decision-making, risk taking, risk sharing, and people's valuation of social capital. In particular, I'm interested in how people's behavior and beliefs are a function of interaction with and (potentially misspecified) learning from others. </p>
 
     <p class="centered-text" style="text-indent: 20px; margin-top: -12px;">In low-income, developing countries where people often have high exposure to risk, enjoy little social insurance from governments, and lack access to credit, these questions have significant welfare consequences as people tend to rely more heavily on each other and behavioral "mistakes" can cause people to forego investments with relatively high rates of return. Focusing on resource-scarce settings, my research aims to clarify how and when these social behaviors can improve well-being, how we can build on existing informal systems to improve well-being, and how we can minimize the negative welfare impacts of these behavioral "mistakes." </p> 
 
-    <p class="centered-text" style="text-indent: 20px; margin-top: -12px;"> <a href="Todd_Wolpin_2023_JEL.pdf" style="text-decoration: underline; color: #2137B2;"> Applying structural methods to experimental data</a>, I will seek to identify the underlying mechanisms that determine behavior, quantify welfare impacts, and conduct counterfactual analyses. </p>
+    <p class="centered-text" style="text-indent: 20px; margin-top: -12px;"> <a href="Todd_Wolpin_2023_JEL.pdf" style="text-decoration: underline; color: #2137B2;"> Applying structural methods to experimental data</a>, I seek to identify the underlying mechanisms that determine behavior, quantify welfare impacts, and conduct counterfactual analyses. </p>
     <br>
     <h3> Works In Progress </h3>
     <p class="centered-text">

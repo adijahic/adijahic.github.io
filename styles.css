@@ -45,6 +45,7 @@ h3 {
 .navbar-nav .nav-item:first-child .nav-link {
     font-size: larger; /* Make the "Home" link larger */
 }
+  
 .navbar {
     margin-bottom: 40px;
     margin-top: 20px; /* Add top margin */
@@ -103,8 +104,8 @@ h3 {
 /* Search results container */
 .search-results {
     position: absolute;
-    top: 50px;
-    right: 10px;
+    top: 70px;
+    right: 40px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -114,27 +115,55 @@ h3 {
     max-width: 300px;
     max-height: 200px;
     overflow-y: auto; /* Add scroll if results exceed the height */
+    font-family: sans-serif; /* Make the text sans-serif */
+}
+
+/* Label at the top of the search results */
+.search-results-label {
+    font-family: sans-serif; /* Match the font with the navbar buttons */
+    font-weight: bold; /* Make the text bold */
+    color: #606060; /* Grey color like the navbar buttons */
+    margin-bottom: 0px; /* Add spacing below the label */
+}
+
+/* Container for the search result links */
+.search-results-links {
+    padding-left: 10px; /* Slightly indent the options */
 }
 
 /* Individual search result links */
 .search-result-link {
     display: block;
     color: #2137B2;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
     padding: 5px 0;
     font-size: 14px;
-    transition: background-color 0.2s ease-in-out;
+    font-family: sans-serif; /* Ensure text is sans-serif */
+    transition: font-weight 0.2s ease-in-out; /* Smooth transition for bold effect */
 }
 
+/* Hover effect: Bold text without underline or highlight */
 .search-result-link:hover {
-    background-color: #f0f0f0;
-    text-decoration: underline;
+    font-weight: bold; /* Make text bold on hover */
+    text-decoration: none; /* Ensure no underline */
+    background-color: transparent; /* Remove any highlight */
+}
+
+/* Hover effect: Underline text */
+.search-result-link:hover {
+    font-weight: normal; /* Keep the text weight normal */
+    text-decoration: underline; /* Add underline on hover */
+    background-color: transparent; /* Ensure no background highlight */
 }
 
 /* Ensure active nav link is only bold */
 .nav-link.fw-bold {
     font-weight: bold; /* Keep the text bold */
     font-size: inherit; /* Ensure it inherits the normal font size */
+}
+
+.dropdown-menu .dropdown-item {
+    text-align: left; /* Align dropdown menu text to the left */
 }
 
 @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
