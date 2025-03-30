@@ -39,8 +39,10 @@
 
    // Hide the search bar and show the magnifying glass when clicking outside
    searchBar.addEventListener("blur", () => {
-       searchBar.style.display = "none";
-       clearSearchResults();
+       setTimeout(() => {
+           searchBar.style.display = "none";
+           clearSearchResults();
+       }, 200); // Delay hiding by 200ms
    });
 
    // Clear search results
