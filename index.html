@@ -158,24 +158,48 @@
 
 <body>
     <!-- Buttons -->
-<nav class="navbar navbar-light bg-transparent">
+<nav class="navbar navbar-expand-sm" style="background-color: transparent; padding: 0;">
   <div class="container-fluid">
-    <!-- Right-aligned search icon and search bar -->
-    <div class="d-flex ms-auto align-items-center">
-      <!-- Magnifying glass button -->
-      <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
-         <i class="bi bi-search"></i>
-      </button>
-      <!-- Collapsible search bar -->
-      <div class="collapse" id="navbarSearch">
-        <form class="d-flex ms-2">
-           <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-           <button class="btn btn-outline-success ms-2" type="submit">Search</button>
-        </form>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse buttons-container" id="navbarClear">
+      <a href="/" class="nav-link button">Home</a>
+      <a href="research.html" class="nav-link button">Research</a>
+      <a href="film.html" class="nav-link button">Film</a>
+      <a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a>
     </div>
+    <!-- Search Button (Magnifying Glass) -->
+    <button class="btn btn-outline-secondary ms-auto" id="search-toggle" style="border: none; background: transparent;">
+      <img src="search-icon.png" alt="Search" width="20px" height="20px">
+    </button>
+    <!-- Search Bar (Initially Hidden) -->
+    <form class="d-flex ms-2" id="search-form" style="display: none;" onsubmit="searchSite(); return false;">
+      <input class="form-control" type="search" id="search-input" placeholder="Search..." aria-label="Search">
+      <button class="btn btn-outline-success ms-2" type="submit">Go</button>
+    </form>
   </div>
 </nav>
+
+<script>
+  // Toggle search bar visibility when clicking the search button
+  document.getElementById("search-toggle").addEventListener("click", function () {
+      var searchForm = document.getElementById("search-form");
+      if (searchForm.style.display === "none") {
+          searchForm.style.display = "flex";
+      } else {
+          searchForm.style.display = "none";
+      }
+  });
+
+  // Handle search function
+  function searchSite() {
+      var query = document.getElementById('search-input').value;
+      var encodedQuery = encodeURIComponent(query);
+      window.location.href = 'search-results.html?q=' + encodedQuery;
+  }
+</script>
+
 
     <div class="image-container">
         <img src="adi-jahic-3.png" alt="Adi Jahić"  style="width: 320px; height: 426px; margin-right: 20px; margin-top:40px">
