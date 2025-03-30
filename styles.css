@@ -69,6 +69,14 @@ h3 {
     font-weight: bold;
     font-size: larger;
 }
+.div-group {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    margin-bottom: 10px; /* Add spacing between sections */
+}
+.centered-text {
+    text-align: left; /* Ensure text aligns properly */
+}
 @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
     body {
         margin-left: 140px;
