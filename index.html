@@ -169,17 +169,40 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- Navigation Links (Aligned Next to Logo) -->
     <div class="collapse navbar-collapse" id="navbarClear">
       <ul class="navbar-nav">
-        <li class="nav-item"><a href="/" class="nav-link button">Home</a></li>
-        <li class="nav-item"><a href="research.html" class="nav-link button">Research</a></li>
-        <li class="nav-item"><a href="film.html" class="nav-link button">Film</a></li>
-        <li class="nav-item"><a href="AdiJahic_CV.pdf" target="_blank" class="nav-link button">CV</a></li>
+        <li class="nav-item"><a href="/" class="nav-link" id="home-link">Home</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link" id="research-link">Research</a></li>
+        <li class="nav-item"><a href="film.html" class="nav-link" id="film-link">Film</a></li>
+        <li class="nav-item"><a href="AdiJahic_CV.pdf" target="_blank" class="nav-link" id="cv-link">CV</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<script>
+  // Get the current page URL
+  var currentPage = window.location.pathname;
+
+  // Function to add "active" class to the correct nav link
+  function setActiveNavLink() {
+    if (currentPage.includes("research.html")) {
+      document.getElementById("research-link").classList.add("fw-bold");
+    } else if (currentPage.includes("film.html")) {
+      document.getElementById("film-link").classList.add("fw-bold");
+    } else if (currentPage.includes("AdiJahic_CV.pdf")) {
+      document.getElementById("cv-link").classList.add("fw-bold");
+    } else {
+      document.getElementById("home-link").classList.add("fw-bold");
+    }
+  }
+
+  // Run function when page loads
+  setActiveNavLink();
+</script>
+
 
 
 
