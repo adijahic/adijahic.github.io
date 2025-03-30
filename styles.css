@@ -67,7 +67,6 @@ h3 {
 }
 .navbar-nav .nav-link.fw-bold {
     font-weight: bold;
-    font-size: larger;
 }
 .div-group {
     display: flex;
@@ -77,6 +76,67 @@ h3 {
 .centered-text {
     text-align: left; /* Ensure text aligns properly */
 }
+/* Search bar styles */
+#search-bar {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#search-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #606060;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #2137B2;
+}
+
+/* Search results container */
+.search-results {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: auto; /* Add scroll if results exceed the height */
+}
+
+/* Individual search result links */
+.search-result-link {
+    display: block;
+    color: #2137B2;
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-result-link:hover {
+    background-color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* Ensure active nav link is only bold */
+.nav-link.fw-bold {
+    font-weight: bold; /* Keep the text bold */
+    font-size: inherit; /* Ensure it inherits the normal font size */
+}
+
 @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
     body {
         margin-left: 140px;

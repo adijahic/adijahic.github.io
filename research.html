@@ -49,27 +49,33 @@
 <body>
     <nav class="navbar navbar-expand-sm" style="background-color: transparent; padding: 0;">
         <div class="container-fluid">
-          <!-- Logo on the left -->
-          <a class="navbar-brand" href="/">
-            <img src="photos/Brown-University-Seal.png" alt="Brown University Seal" width="40px" height="53px" style="margin-right: 3px; margin-left: -10px">
-          </a>
-      
-          <!-- Navbar Toggle Button (for mobile) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Navigation Links -->
-          <div class="collapse navbar-collapse" id="navbarClear">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="/" class="nav-link" id="home-link">Home</a></li>
-              <li class="nav-item"><a href="research.html" class="nav-link" id="research-link">Research</a></li>
-              <li class="nav-item"><a href="film.html" class="nav-link" id="film-link">Film</a></li>
-              <li class="nav-item"><a href="AdiJahic_CV.pdf" target="_blank" class="nav-link" id="cv-link">CV</a></li>
-            </ul>
-          </div>
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="/">
+                <img src="photos/Brown-University-Seal.png" alt="Brown University Seal" width="40px" height="53px" style="margin-right: 3px; margin-left: -10px">
+            </a>
+    
+            <!-- Navbar Toggle Button (for mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarClear" aria-controls="navbarClear" aria-expanded="false" aria-label="Toggle navigation" style="border: none; background: transparent;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarClear">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="/" class="nav-link" id="home-link">Home</a></li>
+                    <li class="nav-item"><a href="research.html" class="nav-link" id="research-link">Research</a></li>
+                    <li class="nav-item"><a href="film.html" class="nav-link" id="film-link">Film</a></li>
+                    <li class="nav-item"><a href="AdiJahic_CV.pdf" target="_blank" class="nav-link" id="cv-link">CV</a></li>
+                </ul>
+    
+                <!-- Search Icon and Search Bar -->
+                <div class="search-container" style="position: relative;">
+                    <i class="bi bi-search" id="search-icon" style="cursor: pointer; font-size: 1.5rem;"></i>
+                    <input type="text" id="search-bar" placeholder="Search..." style="display: none; position: absolute; top: 0; right: 0; width: 200px; padding: 5px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+            </div>
         </div>
-      </nav>
+    </nav>
       
       
       <script>
@@ -98,6 +104,105 @@
         // Run function when page loads
         setActiveNavLink();
       </script>
+
+
+<script>
+    // Toggle the search bar when the magnifying glass is clicked
+    const searchIcon = document.getElementById("search-icon");
+    const searchBar = document.getElementById("search-bar");
+
+    searchIcon.addEventListener("click", () => {
+        if (searchBar.style.display === "none" || searchBar.style.display === "") {
+            searchBar.style.display = "block";
+            searchBar.focus();
+        } else {
+            searchBar.style.display = "none";
+            clearSearchResults();
+        }
+    });
+
+    // Clear search results
+    function clearSearchResults() {
+        const searchResults = document.getElementById("search-results");
+        if (searchResults) {
+            searchResults.remove();
+        }
+    }
+
+    // Perform the search dynamically as the user types
+    searchBar.addEventListener("input", async () => {
+        const query = searchBar.value.toLowerCase();
+        const pages = [
+            { name: "Home", url: "/" },
+            { name: "Research", url: "research.html" },
+            { name: "Film", url: "film.html" },
+            { name: "CV", url: "AdiJahic_CV.pdf" }
+        ];
+
+        clearSearchResults();
+
+        if (query.trim() === "") {
+            return; // Do nothing if the search bar is empty
+        }
+
+        const results = [];
+
+        // Fetch and search each page's content
+        for (const page of pages) {
+            try {
+                const response = await fetch(page.url);
+                const text = await response.text();
+
+                // Check if the query exists in the page content
+                if (text.toLowerCase().includes(query)) {
+                    results.push(page);
+                }
+            } catch (error) {
+                console.error(`Failed to fetch ${page.url}:`, error);
+            }
+        }
+
+        // Display results
+        if (results.length > 0) {
+            const resultLinks = results
+                .map(
+                    (result) =>
+                        `<a href="${result.url}?search=${encodeURIComponent(query)}" class="search-result-link">${result.name}</a>`
+                )
+                .join("");
+            const resultsContainer = `<div id="search-results" class="search-results">${resultLinks}</div>`;
+            document.body.insertAdjacentHTML("beforeend", resultsContainer);
+        }
+    });
+
+    // Highlight the searched text on the target page
+    function highlightText(query) {
+        const elements = document.body.querySelectorAll("*:not(script):not(style)");
+        elements.forEach((element) => {
+            element.childNodes.forEach((node) => {
+                if (node.nodeType === 3) { // Text node
+                    const text = node.nodeValue;
+                    const regex = new RegExp(`(${query})`, "gi");
+                    if (regex.test(text)) {
+                        const highlightedText = text.replace(regex, '<span style="background-color: yellow;">$1</span>');
+                        const span = document.createElement("span");
+                        span.innerHTML = highlightedText;
+                        node.replaceWith(span);
+                    }
+                }
+            });
+        });
+    }
+
+    window.addEventListener("load", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get("search");
+
+        if (searchQuery) {
+            highlightText(searchQuery);
+        }
+    });
+</script>
 
     <h1 style="margin-top: 50px;">Research</h1>
     <p class="centered-text"> My research interests are at the intersection of <a href="Behavioral_Development_Chapter.pdf" target ="_blank" style="text-decoration: underline; color: #2137B2;">Behavioral and Development Economics</a>, with a focus on <a href="https://academic.oup.com/edited-volume/28058" target ="_blank" style="text-decoration: underline; color: #2137B2;">social networks</a>. I plan to empirically study how social networks and behavioral factors influence learning, decision-making, risk taking, risk sharing, and people's valuation of social capital. In particular, I'm interested in how people's behavior and beliefs are a function of interaction with and (potentially misspecified) learning from others. </p>
