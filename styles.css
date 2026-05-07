@@ -185,3 +185,37 @@ h3 {
         padding-top: 60px; /* Add top padding to increase vertical spacing */
     }
 }
+
+.research-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.research-text {
+    flex: 1;
+}
+
+.research-photo {
+    flex: 0 0 360px;
+    margin-top: 20px;
+}
+
+.research-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+    .research-container {
+        flex-direction: column;
+    }
+
+    .research-photo {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+        margin-top: 10px;
+    }
+}
