@@ -1,41 +1,224 @@
-.research-page {
-    margin-top: 50px;
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 0.2in;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #FFFBEA;
 }
-
-.research-text-block {
-    margin-left: 0;
+h1 {
+    font-weight: bold;
+    font-size: 2em;
 }
-
-.research-image-container {
-    margin-top: 25px;
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+h3 {
+    font-weight: bold;
+    font-size: 1.3em
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar-nav .nav-item {
+    flex: 1;
+    text-align: center;
+}
+.navbar-nav .nav-link {
+    font-family: sans-serif;
+    font-size: medium;
+    color: #606060;
+    text-decoration: none;
+    transition: font-weight 0.2s ease-in-out;
+    display: inline-block;
+    padding: 0 10px;
+}
+.navbar-nav .nav-item:first-child .nav-link {
+    font-size: larger; /* Make the "Home" link larger */
+}
+  
+.navbar {
+    margin-bottom: 40px;
+    margin-top: 20px; /* Add top margin */
+    background-color: transparent;
+    padding: 0;
+}
+.nav-link:hover {
+    font-weight: bold;
+}
+.image-container {
+    overflow: hidden;
     margin-bottom: 20px;
 }
-
-.research-image-container img {
-    width: 100%;
-    max-width: 420px;
+.image-container img {
+    max-width: 110%;
     height: auto;
 }
+.navbar-brand img {
+    margin-right: 5px;
+}
+.navbar-nav .nav-link.fw-bold {
+    font-weight: bold;
+}
+.div-group {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    margin-bottom: 10px; /* Add spacing between sections */
+}
+.centered-text {
+    text-align: left; /* Ensure text aligns properly */
+}
+/* Search bar styles */
+#search-bar {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#search-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #606060;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #2137B2;
+}
+
+/* Search results container */
+.search-results {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: auto; /* Add scroll if results exceed the height */
+    font-family: sans-serif; /* Make the text sans-serif */
+}
+
+/* Label at the top of the search results */
+.search-results-label {
+    font-family: sans-serif; /* Match the font with the navbar buttons */
+    font-weight: bold; /* Make the text bold */
+    color: #606060; /* Grey color like the navbar buttons */
+    margin-bottom: 0px; /* Add spacing below the label */
+}
+
+/* Container for the search result links */
+.search-results-links {
+    padding-left: 10px; /* Slightly indent the options */
+}
+
+/* Individual search result links */
+.search-result-link {
+    display: block;
+    color: #2137B2;
+    text-decoration: none; /* Remove underline */
+    padding: 5px 0;
+    font-size: 14px;
+    font-family: sans-serif; /* Ensure text is sans-serif */
+    transition: font-weight 0.2s ease-in-out; /* Smooth transition for bold effect */
+}
+
+/* Hover effect: Bold text without underline or highlight */
+.search-result-link:hover {
+    font-weight: bold; /* Make text bold on hover */
+    text-decoration: none; /* Ensure no underline */
+    background-color: transparent; /* Remove any highlight */
+}
+
+/* Hover effect: Underline text */
+.search-result-link:hover {
+    font-weight: normal; /* Keep the text weight normal */
+    text-decoration: underline; /* Add underline on hover */
+    background-color: transparent; /* Ensure no background highlight */
+}
+
+/* Ensure active nav link is only bold */
+.nav-link.fw-bold {
+    font-weight: bold; /* Keep the text bold */
+    font-size: inherit; /* Ensure it inherits the normal font size */
+}
+
+.dropdown-menu .dropdown-item {
+    text-align: left; /* Align dropdown menu text to the left */
+}
+
+
 
 @media screen and (orientation: landscape) and (min-aspect-ratio: 1/1) and (min-width: 1001px) {
-    .research-page {
-        margin-left: 50px;
+    body {
+        margin-left: 140px;
+        margin-right: 140px;
+        text-align: left;
+    }
+    .image-container {
+        float: left;
+        margin-right: 20px;
+    }
+    .clearfix {
+        margin-left: -100px;
+    }
+    .content-container {
+        padding-top: 60px; /* Add top padding to increase vertical spacing */
+    }
+}
+
+.research-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.research-text {
+    flex: 1;
+    order: 1;
+}
+
+.research-photo {
+    flex: 0 0 360px;
+    margin-top: 20px;
+    order: 2;
+}
+
+.research-photo img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+    .research-container {
+        flex-direction: column;
     }
 
-    .research-text-block {
-        margin-left: 0;
-    }
-
-    .research-image-container {
-        float: right;
-        overflow: hidden;
-        margin-left: 30px;
-        margin-bottom: 20px;
-    }
-
-    .research-image-container img {
-        width: 320px;
-        height: auto;
-        max-width: 100%;
+    .research-photo {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+        margin-top: 10px;
     }
 }
