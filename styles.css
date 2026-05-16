@@ -234,19 +234,17 @@ h3 {
 .research-container {
     display: flex;
     align-items: flex-start;
-    gap: 40px;
-    margin-top: 50px;
+    gap: 42px;
+    margin-top: 105px;
 }
 
 .research-text {
     flex: 1;
-    order: 1;
+    min-width: 0;
 }
 
 .research-photo {
     flex: 0 0 240px;
-    margin-top: 20px;
-    order: 2;
 }
 
 .research-photo img {
@@ -257,14 +255,15 @@ h3 {
     border-radius: 4px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 820px) {
     .research-container {
         flex-direction: column;
+        gap: 25px;
+        margin-top: 50px;
     }
 
     .research-photo {
         flex: none;
         width: min(240px, 100%);
-        margin-top: 10px;
     }
 }
