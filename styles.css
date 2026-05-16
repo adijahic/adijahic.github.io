@@ -198,12 +198,12 @@ h3 {
 }
 
 .home-photo {
-    flex: 0 0 240px;
+    flex: 0 0 200px;
 }
 
 .home-photo img {
     display: block;
-    width: 240px;
+    width: 200px;
     max-width: 100%;
     height: auto;
 }
@@ -227,7 +227,7 @@ h3 {
 
     .home-photo {
         flex: none;
-        width: min(240px, 100%);
+        width: min(200px, 100%);
     }
 }
 
@@ -244,12 +244,12 @@ h3 {
 }
 
 .research-photo {
-    flex: 0 0 240px;
+    flex: 0 0 200px;
 }
 
 .research-photo img {
     display: block;
-    width: 240px;
+    width: 200px;
     height: auto;
     max-width: 100%;
     border-radius: 4px;
@@ -264,6 +264,6 @@ h3 {
 
     .research-photo {
         flex: none;
-        width: min(240px, 100%);
+        width: min(200px, 100%);
     }
 }
