@@ -73,6 +73,11 @@ h3 {
 .centered-text {
     text-align: left; /* Ensure text aligns properly */
 }
+
+.margin-right-large {
+    margin-left: 20px;
+}
+
 /* Search bar styles */
 #search-bar {
     display: none; /* Initially hidden */
