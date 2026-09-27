@@ -7,8 +7,6 @@
      
      if (currentPage.includes("research.html")) {
        activeLink = document.getElementById("research-link");
-     } else if (currentPage.includes("film.html")) {
-       activeLink = document.getElementById("film-link");
      } else if (currentPage.includes("AdiJahic_CV.pdf")) {
        activeLink = document.getElementById("cv-link");
      } else {
@@ -59,7 +57,6 @@
        const pages = [
            { name: "Home", url: "/" },
            { name: "Research", url: "research.html" },
-           { name: "Film", url: "film.html" },
            { name: "CV", url: "AdiJahic_CV.pdf" }, // Include the CV PDF file
            { name: "Risk Sharing...", url: "Jahic_RiskSharingandPortfolioChoice.pdf" } // Example PDF
        ];
